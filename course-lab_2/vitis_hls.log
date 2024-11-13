@@ -1,0 +1,39 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'MD706' on host 'desktop-dg67uh8' (Windows NT_amd64 version 6.2) on Sun Sep 15 18:17:10 +0800 2024
+INFO: [HLS 200-10] In directory 'C:/Users/MD706/Documents/soc_lab/course-lab_2'
+Sourcing Tcl script 'C:/Users/MD706/Documents/soc_lab/course-lab_2/hls_ip_2/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/MD706/Documents/soc_lab/course-lab_2/hls_ip_2/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project hls_ip_2 
+INFO: [HLS 200-10] Opening project 'C:/Users/MD706/Documents/soc_lab/course-lab_2/hls_ip_2'.
+INFO: [HLS 200-1510] Running: set_top fir_n11_strm 
+INFO: [HLS 200-1510] Running: add_files hls_FIRN11Stream/FIR.cpp 
+INFO: [HLS 200-10] Adding design file 'hls_FIRN11Stream/FIR.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hls_FIRN11Stream/FIR.h 
+INFO: [HLS 200-10] Adding design file 'hls_FIRN11Stream/FIR.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hls_FIRN11Stream/FIRTester.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hls_FIRN11Stream/FIRTester.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/MD706/Documents/soc_lab/course-lab_2/hls_ip_2/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 15 18:17:33 2024...
+INFO: [HLS 200-802] Generated output file hls_ip_2/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 21.228 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 0 seconds. Total elapsed time: 23.548 seconds; peak allocated memory: 1.465 GB.

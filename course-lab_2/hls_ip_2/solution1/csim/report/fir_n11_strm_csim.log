@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../hls_FIRN11Stream/FIRTester.cpp in debug mode
+   Generating csim.exe
+>> Start test!
+>> Comparing against output data...
+正在比較檔案 out.dat 和 ..//..//..//..//HLS_FIRN11STREAM/OUT_GOLD.DAT
+FC: 找不到相異處
+
+>> Test passed!
+------------------------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

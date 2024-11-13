@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Sep  8 16:09:11 2024
+# Process ID: 8844
+# Current directory: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/multip_2num/xsim_script.tcl}
+# Log file: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog\xsim.jou
+# Running On: DESKTOP-DG67UH8, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 6, Host memory: 16924 MB
+#-----------------------------------------------------------
+source xsim.dir/multip_2num/xsim_script.tcl
+open_wave_config multip_2num_dataflow_ana.wcfg
+source multip_2num.tcl

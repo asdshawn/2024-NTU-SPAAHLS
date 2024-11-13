@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.843+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.491+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.476+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.461+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.445+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.434+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.421+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.402+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.390+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.380+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization." projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:43.365+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_9', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 10). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.892+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_8', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.825+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_6', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.799+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_3', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.786+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_2', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.768+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load_1', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.753+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'fir_n11_strm_Pipeline_XFER_LOOP' (loop 'XFER_LOOP'): Unable to schedule 'load' operation ('an32Coef_load', hls_FIRN11Stream/FIR.cpp:34) on array 'an32Coef' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'an32Coef'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html" projectName="hls_ip_2" solutionName="solution1" date="2024-09-15T17:47:42.742+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

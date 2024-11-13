@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Sep  8 16:09:56 2024
+# Process ID: 10204
+# Current directory: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog\vivado.jou
+# Running On: DESKTOP-DG67UH8, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 6, Host memory: 16924 MB
+#-----------------------------------------------------------start_gui
+ssource open_wave.tcloopen_wave_config C:/Users/MD706/Documents/soc_lab/course-lab_1/hls_ip/solution1/sim/verilog/multip_2num.wcfgcclose_sim

@@ -1,0 +1,35 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.498905",
+   "Default View_TopLeft":"597,-120",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 5 -x 1700 -y 110 -defaultsOSRD
+preplace inst fir_n11_strm_0 -pg 1 -lvl 2 -x 560 -y 100 -defaultsOSRD
+preplace inst axi_dma_in_0 -pg 1 -lvl 7 -x 2550 -y 330 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 6 -x 2200 -y 440 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 1 -x 190 -y 140 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1250 -y 100 -defaultsOSRD
+preplace inst axi_dma_out_0 -pg 1 -lvl 3 -x 920 -y 110 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 20 40 360 190 730 220 1090 190 1400 240 2010 250 2380
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 6 20 250 NJ 250 NJ 250 NJ 250 NJ 250 2000
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 6 370 200 740 240 1100 240 1390J 260 2000 630 2380J
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 5 1 2030 70n
+preplace netloc ps8_0_axi_periph_M00_AXI 1 6 1 2370 300n
+preplace netloc ps8_0_axi_periph_M01_AXI 1 1 6 380 210 NJ 210 NJ 210 NJ 210 NJ 210 2360
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 5 1110 220 NJ 220 NJ 220 NJ 220 2720
+preplace netloc axi_smc_M00_AXI 1 4 1 1390 70n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 5 1 2020 90n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 7 370 10 NJ 10 NJ 10 NJ 10 NJ 10 NJ 10 2730
+preplace netloc axi_dma_out_0_M_AXI_S2MM 1 3 1 N 90
+preplace netloc ps8_0_axi_periph_M02_AXI 1 2 5 750 230 NJ 230 NJ 230 NJ 230 2350
+preplace netloc fir_n11_strm_0_pstrmOutput 1 2 1 N 90
+levelinfo -pg 1 0 190 560 920 1250 1700 2200 2550 2750
+pagesize -pg 1 -db -bbox -sgen 0 0 2750 640
+"
+}
+{
+   "da_axi4_cnt":"6",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.649+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.389+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.381+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.373+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.362+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.354+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.344+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.335+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.326+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.318+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization." projectName="hls_ip" solutionName="solution1" date="2024-09-13T12:42:30.309+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
