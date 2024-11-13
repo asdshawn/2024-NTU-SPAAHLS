@@ -1,7 +1,0 @@
-Running: xsim.dir/multip_2num/xsimk.exe -simmode gui -wdb multip_2num.wdb -simrunnum 0 -socket 54056
-Design successfully loaded
-Design Loading Memory Usage: 8876 KB (Peak: 8876 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 13204 KB (Peak: 13204 KB)
-Simulation CPU Usage: 15 ms
