@@ -1,0 +1,32 @@
+15:49:41 DEBUG : Logs will be stored at '/mnt/HLSNAS/01.OIAetA/course-lab_3/Lab3/IDE.log'.
+15:49:42 INFO  : Launching XSCT server: xsct -n  -interactive /mnt/HLSNAS/01.OIAetA/course-lab_3/Lab3/temp_xsdb_launch_script.tcl
+15:49:42 INFO  : Registering command handlers for Vitis TCF services
+15:49:42 INFO  : Platform repository initialization has completed.
+15:49:44 INFO  : XSCT server has started successfully.
+15:49:44 INFO  : plnx-install-location is set to ''
+15:49:44 INFO  : Successfully done setting XSCT server connection channel  
+15:49:44 INFO  : Successfully done query RDI_DATADIR 
+15:49:44 INFO  : Successfully done setting workspace for the tool. 
+15:51:08 INFO  : Added kernel '[KA - vts_Opt1Baseline_kernels/src/K_KA.cpp]' in binary container 'binary_container_1' of project 'vts_Opt1Baseline_system_hw_link'
+15:51:08 INFO  : Added kernel '[KB - vts_Opt1Baseline_kernels/src/K_KB.cpp]' in binary container 'binary_container_1' of project 'vts_Opt1Baseline_system_hw_link'
+15:51:08 INFO  : Added kernel '[KCalc - vts_Opt1Baseline_kernels/src/K_KCalc.cpp]' in binary container 'binary_container_1' of project 'vts_Opt1Baseline_system_hw_link'
+15:51:08 INFO  : Added kernel '[KVConstAdd - vts_Opt1Baseline_kernels/src/K_KVConstAdd.cpp]' in binary container 'binary_container_1' of project 'vts_Opt1Baseline_system_hw_link'
+15:51:08 INFO  : Added kernel '[KpB - vts_Opt1Baseline_kernels/src/K_KpB.cpp]' in binary container 'binary_container_1' of project 'vts_Opt1Baseline_system_hw_link'
+15:52:21 INFO  : Launching executable: Emulation-SW/vts_Opt1Baseline Xilinx xilinx_u50_gen3x16_xdma_5_202210_1 ${project_loc:vts_Opt1Baseline_system}/Emulation-SW/binary_container_1.xclbin
+15:52:38 INFO  : Build configuration of 'vts_Opt1Baseline_system_hw_link' is updated to 'Emulation-HW'
+15:52:38 INFO  : Build configuration of 'vts_Opt1Baseline_kernels' is updated to 'Emulation-HW'
+15:52:38 INFO  : Build configuration of 'vts_Opt1Baseline' is updated to 'Emulation-HW'
+16:13:57 DEBUG : Logs will be stored at '/mnt/HLSNAS/01.OIAetA/course-lab_3/Lab3/IDE.log'.
+16:13:57 INFO  : Launching XSCT server: xsct -n  -interactive /mnt/HLSNAS/01.OIAetA/course-lab_3/Lab3/temp_xsdb_launch_script.tcl
+16:13:58 INFO  : Platform repository initialization has completed.
+16:13:59 INFO  : Registering command handlers for Vitis TCF services
+16:13:59 INFO  : XSCT server has started successfully.
+16:13:59 INFO  : plnx-install-location is set to ''
+16:13:59 INFO  : Successfully done setting XSCT server connection channel  
+16:13:59 INFO  : Successfully done query RDI_DATADIR 
+16:13:59 INFO  : Successfully done setting workspace for the tool. 
+16:14:14 INFO  : Launching executable: Emulation-HW/vts_Opt1Baseline Xilinx xilinx_u50_gen3x16_xdma_5_202210_1 ${project_loc:vts_Opt1Baseline_system}/Emulation-HW/binary_container_1.xclbin
+16:15:33 INFO  : Build configuration of 'vts_Opt1Baseline_system_hw_link' is updated to 'Hardware'
+16:15:33 INFO  : Build configuration of 'vts_Opt1Baseline_kernels' is updated to 'Hardware'
+16:15:33 INFO  : Build configuration of 'vts_Opt1Baseline' is updated to 'Hardware'
+17:10:11 INFO  : Launching executable: Hardware/vts_Opt1Baseline Xilinx xilinx_u50_gen3x16_xdma_base_5 ${project_loc:vts_Opt1Baseline_system}/Hardware/binary_container_1.xclbin

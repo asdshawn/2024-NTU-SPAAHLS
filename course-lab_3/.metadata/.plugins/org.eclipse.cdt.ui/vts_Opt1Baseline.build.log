@@ -1,0 +1,104 @@
+16:15:35 **** Build of configuration Hardware for project vts_Opt1Baseline ****
+make -j16 all 
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_u50_gen3x16_xdma_5_202210_1 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vitis_HLS/2022.1/include/ -O2 -g -Wall -c -fmessage-length=0 -o "src/help_functions.o" "../src/help_functions.cpp"
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_u50_gen3x16_xdma_5_202210_1 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vitis_HLS/2022.1/include/ -O2 -g -Wall -c -fmessage-length=0 -o "src/host.o" "../src/host.cpp"
+In file included from /usr/include/CL/cl.h:32,
+                 from ../src/help_functions.h:25,
+                 from ../src/help_functions.cpp:31:
+/usr/include/CL/cl_version.h:34:104: note: #pragma message: cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)
+   34 | #pragma message("cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)")
+      |                                                                                                        ^
+In file included from /usr/include/CL/cl.h:32,
+                 from ../src/host.cpp:42:
+/usr/include/CL/cl_version.h:34:104: note: #pragma message: cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)
+   34 | #pragma message("cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 220 (OpenCL 2.2)")
+      |                                                                                                        ^
+../src/host.cpp: In function ‘int main(int, char**)’:
+../src/host.cpp:285:142: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+  285 |  Command_Queue = clCreateCommandQueue(Context, Target_Device_ID, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE | CL_QUEUE_PROFILING_ENABLE, &errCode);
+      |                                                                                                                                              ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1781:1: note: declared here
+ 1781 | clCreateCommandQueue(cl_context                     context,
+      | ^~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:285:142: warning: ‘_cl_command_queue* clCreateCommandQueue(cl_context, cl_device_id, cl_command_queue_properties, cl_int*)’ is deprecated [-Wdeprecated-declarations]
+  285 |  Command_Queue = clCreateCommandQueue(Context, Target_Device_ID, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE | CL_QUEUE_PROFILING_ENABLE, &errCode);
+      |                                                                                                                                              ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1781:1: note: declared here
+ 1781 | clCreateCommandQueue(cl_context                     context,
+      | ^~~~~~~~~~~~~~~~~~~~
+../src/host.cpp:677:79: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  677 |  errCode = clEnqueueTask(Command_Queue, K_KVConstAdd, 0, NULL, &K_exe_event[0]);
+      |                                                                               ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:677:79: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  677 |  errCode = clEnqueueTask(Command_Queue, K_KVConstAdd, 0, NULL, &K_exe_event[0]);
+      |                                                                               ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:685:82: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  685 |  errCode = clEnqueueTask(Command_Queue, K_KA, 1, &K_exe_event[0], &K_exe_event[2]);
+      |                                                                                  ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:685:82: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  685 |  errCode = clEnqueueTask(Command_Queue, K_KA, 1, &K_exe_event[0], &K_exe_event[2]);
+      |                                                                                  ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:694:83: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  694 |  errCode = clEnqueueTask(Command_Queue, K_KpB, 1, &K_exe_event[2], &K_exe_event[1]);
+      |                                                                                   ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:694:83: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  694 |  errCode = clEnqueueTask(Command_Queue, K_KpB, 1, &K_exe_event[2], &K_exe_event[1]);
+      |                                                                                   ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:702:82: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  702 |  errCode = clEnqueueTask(Command_Queue, K_KB, 1, &K_exe_event[1], &K_exe_event[3]);
+      |                                                                                  ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:702:82: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  702 |  errCode = clEnqueueTask(Command_Queue, K_KB, 1, &K_exe_event[1], &K_exe_event[3]);
+      |                                                                                  ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:710:85: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  710 |  errCode = clEnqueueTask(Command_Queue, K_KCalc, 2, &K_exe_event[2], &K_exe_event[4]);
+      |                                                                                     ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+../src/host.cpp:710:85: warning: ‘cl_int clEnqueueTask(cl_command_queue, cl_kernel, cl_uint, _cl_event* const*, _cl_event**)’ is deprecated [-Wdeprecated-declarations]
+  710 |  errCode = clEnqueueTask(Command_Queue, K_KCalc, 2, &K_exe_event[2], &K_exe_event[4]);
+      |                                                                                     ^
+In file included from ../src/host.cpp:42:
+/usr/include/CL/cl.h:1794:1: note: declared here
+ 1794 | clEnqueueTask(cl_command_queue  command_queue,
+      | ^~~~~~~~~~~~~
+g++ -o "vts_Opt1Baseline" src/help_functions.o src/host.o -lxilinxopencl -lpthread -lrt -lstdc++ -L/opt/xilinx/xrt/lib/ -Wl,-rpath-link,/opt/xilinx/xrt/lib
+
+16:15:36 Build Finished (took 726ms)
+
