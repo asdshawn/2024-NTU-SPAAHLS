@@ -1,0 +1,63 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Nov  8 21:38:56 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             pass.hw
+Target Device:           xilinx:u50:gen3x16_xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+pass         c     fpga0:OCL_REGION_0  pass.hw         1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     pass.hw
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                     Target Frequency  Estimated Frequency
+------------  -----------  ------------------------------  ----------------  -------------------
+pass_1        pass         entry_proc                      300.300293        821.692688
+pass_1        pass         read_Pipeline_VITIS_LOOP_13_1   300.300293        411.015198
+pass_1        pass         read_r                          300.300293        411.015198
+pass_1        pass         exec_Pipeline_VITIS_LOOP_23_1   300.300293        419.815277
+pass_1        pass         exec                            300.300293        411.015198
+pass_1        pass         write_Pipeline_VITIS_LOOP_35_1  300.300293        411.015198
+pass_1        pass         write_r                         300.300293        411.015198
+pass_1        pass         pass_dataflow                   300.300293        411.015198
+pass_1        pass         pass                            300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                     Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+pass_1        pass         entry_proc                      0               0              0             0               0 ns             0 ns            0 ns
+pass_1        pass         read_Pipeline_VITIS_LOOP_13_1   undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         read_r                          undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         exec_Pipeline_VITIS_LOOP_23_1   undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         exec                            undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         write_Pipeline_VITIS_LOOP_35_1  undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         write_r                         undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         pass_dataflow                   undef           undef          undef         undef           undef            undef           undef
+pass_1        pass         pass                            undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name                     FF     LUT    DSP  BRAM  URAM
+------------  -----------  ------------------------------  -----  -----  ---  ----  ----
+pass_1        pass         entry_proc                      3      38     0    0     0
+pass_1        pass         read_Pipeline_VITIS_LOOP_13_1   550    119    0    0     0
+pass_1        pass         read_r                          684    651    0    0     0
+pass_1        pass         exec_Pipeline_VITIS_LOOP_23_1   1676   675    0    0     0
+pass_1        pass         exec                            1779   850    0    0     0
+pass_1        pass         write_Pipeline_VITIS_LOOP_35_1  550    121    0    0     0
+pass_1        pass         write_r                         715    676    0    0     0
+pass_1        pass         pass_dataflow                   5385   3433   0    0     0
+pass_1        pass         pass                            14909  19939  0    0     0
+-------------------------------------------------------------------------------

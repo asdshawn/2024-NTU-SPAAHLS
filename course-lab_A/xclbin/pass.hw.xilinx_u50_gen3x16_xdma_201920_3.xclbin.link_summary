@@ -1,0 +1,481 @@
+<ENTRY>
+{
+ "thisFile": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xilinx_u50_gen3x16_xdma_201920_3.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:07 2024",
+ "timestampMillis": "1731073147456",
+ "buildStep": {
+  "cmdId": "dd4a2ef8-74a0-46b0-b75d-80669490b5d5",
+  "name": "v++",
+  "logFile": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw --platform xilinx_u50_gen3x16_xdma_201920_3 --save-temps -l --config design.cfg -oxclbin/pass.hw.xilinx_u50_gen3x16_xdma_201920_3.xclbin xclbin/pass.hw.xo ",
+  "args": [
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "--save-temps",
+   "-l",
+   "--config",
+   "design.cfg",
+   "-oxclbin/pass.hw.xilinx_u50_gen3x16_xdma_201920_3.xclbin",
+   "xclbin/pass.hw.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/design.cfg",
+    "content": "[connectivity]\nnk=pass:1\nsp=pass_1.m_axi_p0:HBM[0]\nsp=pass_1.m_axi_p1:HBM[1]\n"
+   }
+  ],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:07 2024",
+ "timestampMillis": "1731073147459",
+ "status": {
+  "cmdId": "dd4a2ef8-74a0-46b0-b75d-80669490b5d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Nov  8 21:39:10 2024",
+ "timestampMillis": "1731073150744",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "pass.hw.xilinx_u50_gen3x16_xdma_201920_3",
+    "file": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xilinx_u50_gen3x16_xdma_201920_3.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "pass",
+     "file": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/pass/pass/cpu_sources/pass.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "pass_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:10 2024",
+ "timestampMillis": "1731073150879",
+ "buildStep": {
+  "cmdId": "8a3c440d-8a61-47ce-b100-61c7bea8a724",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xo -keep --config /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target hw --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xo",
+   "-keep",
+   "--config",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int",
+   "--temp_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/syslinkConfig.ini",
+    "content": "nk=pass:1\nsp=pass_1.m_axi_p0:HBM[0]\nsp=pass_1.m_axi_p1:HBM[1]\n\n"
+   }
+  ],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:10 2024",
+ "timestampMillis": "1731073150880",
+ "status": {
+  "cmdId": "8a3c440d-8a61-47ce-b100-61c7bea8a724",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:19 2024",
+ "timestampMillis": "1731073159094",
+ "status": {
+  "cmdId": "8a3c440d-8a61-47ce-b100-61c7bea8a724",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:19 2024",
+ "timestampMillis": "1731073159100",
+ "buildStep": {
+  "cmdId": "5d3a1b3c-21ff-473c-a514-8f2d5f296f1a",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/sdsl.dat -rtd /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw.rtd -nofilter /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw_full.rtd -xclbin /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.xml -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:19 2024",
+ "timestampMillis": "1731073159101",
+ "status": {
+  "cmdId": "5d3a1b3c-21ff-473c-a514-8f2d5f296f1a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160658",
+ "status": {
+  "cmdId": "5d3a1b3c-21ff-473c-a514-8f2d5f296f1a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160663",
+ "buildStep": {
+  "cmdId": "11056a40-1beb-47b1-b35b-5dd7c496c42d",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160663",
+ "status": {
+  "cmdId": "11056a40-1beb-47b1-b35b-5dd7c496c42d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160811",
+ "report": {
+  "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160813",
+ "status": {
+  "cmdId": "11056a40-1beb-47b1-b35b-5dd7c496c42d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160821",
+ "buildStep": {
+  "cmdId": "df0bda4e-6dd3-4944-bb7d-83919e1c4735",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/.ipcache -s --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --log_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/link --report_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link --config /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/vplConfig.ini -k /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link --no-info --iprepo /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0 --messageDb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link/vpl.pb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "--remote_ip_cache",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/.ipcache",
+   "-s",
+   "--output_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int",
+   "--log_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/link",
+   "--report_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link",
+   "--config",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/vplConfig.ini",
+   "-k",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0",
+   "--messageDb",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link/vpl.pb",
+   "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files\nmisc=BinaryName=pass.hw.xilinx_u50_gen3x16_xdma_201920_3\n\n[connectivity]\nnk=pass:1:pass_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:20 2024",
+ "timestampMillis": "1731073160821",
+ "status": {
+  "cmdId": "df0bda4e-6dd3-4944-bb7d-83919e1c4735",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:21 2024",
+ "timestampMillis": "1731073161656",
+ "buildStep": {
+  "cmdId": "74b5a1b9-a990-4cd0-ae3f-9b034a2a6617",
+  "name": "vpl",
+  "logFile": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/.ipcache -s --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --log_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/link --report_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link --config /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/vplConfig.ini -k /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link --no-info --iprepo /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0 --messageDb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link/vpl.pb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:21 2024",
+ "timestampMillis": "1731073161657",
+ "status": {
+  "cmdId": "74b5a1b9-a990-4cd0-ae3f-9b034a2a6617",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Nov  8 21:39:39 2024",
+ "timestampMillis": "1731073179421",
+ "vivadoProject": {
+  "openDir": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov  8 21:39:39 2024",
+ "timestampMillis": "1731073179422",
+ "buildStep": {
+  "cmdId": "e8b4374e-b1c8-4cce-9282-0bddc61fa92f",
+  "name": "vivado",
+  "logFile": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:39:39 2024",
+ "timestampMillis": "1731073179423",
+ "status": {
+  "cmdId": "e8b4374e-b1c8-4cce-9282-0bddc61fa92f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:40:41 2024",
+ "timestampMillis": "1731073241574",
+ "status": {
+  "cmdId": "e8b4374e-b1c8-4cce-9282-0bddc61fa92f",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:40:42 2024",
+ "timestampMillis": "1731073242834",
+ "status": {
+  "cmdId": "74b5a1b9-a990-4cd0-ae3f-9b034a2a6617",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:40:42 2024",
+ "timestampMillis": "1731073242842",
+ "status": {
+  "cmdId": "df0bda4e-6dd3-4944-bb7d-83919e1c4735",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Nov  8 21:40:43 2024",
+ "timestampMillis": "1731073243195",
+ "report": {
+  "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link/v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Nov  8 21:40:43 2024",
+ "timestampMillis": "1731073243198",
+ "report": {
+  "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Nov  8 21:40:43 2024",
+ "timestampMillis": "1731073243203",
+ "report": {
+  "path": "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov  8 21:40:43 2024",
+ "timestampMillis": "1731073243209",
+ "status": {
+  "cmdId": "dd4a2ef8-74a0-46b0-b75d-80669490b5d5",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>

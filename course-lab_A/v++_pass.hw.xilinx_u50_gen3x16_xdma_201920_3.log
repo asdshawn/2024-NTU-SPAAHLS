@@ -1,0 +1,123 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link
+	Log files: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xilinx_u50_gen3x16_xdma_201920_3.xclbin.link_summary, at Fri Nov  8 21:39:07 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Nov  8 21:39:07 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link/v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3_guidance.html', at Fri Nov  8 21:39:08 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-1302] Platform 'xilinx_u50_gen3x16_xdma_201920_3.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [21:39:10] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xo -keep --config /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target hw --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Fri Nov  8 21:39:11 2024
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/xclbin/pass.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [21:39:12] build_xd_ip_db started: /opt/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/hw.hpfm -clkid 0 -ip /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/iprepo/xilinx_com_hls_pass_1_0,pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [21:39:15] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2268.816 ; gain = 0.000 ; free physical = 26232 ; free virtual = 71716
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [21:39:15] cfgen started: /opt/Xilinx/Vitis/2022.1/bin/cfgen  -nk pass:1 -sp pass_1.m_axi_p0:HBM[0] -sp pass_1.m_axi_p1:HBM[1] -dmclkid 0 -r /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: pass, num: 1  {pass_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: pass_1, k_port: m_axi_p0, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: pass_1, k_port: m_axi_p1, sptag: HBM[1]
+INFO: [SYSTEM_LINK 82-37] [21:39:17] cfgen finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2268.816 ; gain = 0.000 ; free physical = 26232 ; free virtual = 71716
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [21:39:17] cf2bd started: /opt/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.xsd --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [21:39:19] cf2bd finished successfully
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2268.816 ; gain = 0.000 ; free physical = 26229 ; free virtual = 71717
+INFO: [v++ 60-1441] [21:39:19] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2208.578 ; gain = 0.000 ; free physical = 26269 ; free virtual = 71757
+INFO: [v++ 60-1443] [21:39:19] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/sdsl.dat -rtd /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw.rtd -nofilter /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/cf2sw_full.rtd -xclbin /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.xml -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link
+INFO: [v++ 60-1441] [21:39:20] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2208.578 ; gain = 0.000 ; free physical = 26268 ; free virtual = 71757
+INFO: [v++ 60-1443] [21:39:20] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link
+INFO: [v++ 60-1441] [21:39:20] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2208.578 ; gain = 0.000 ; free physical = 26263 ; free virtual = 71752
+INFO: [v++ 60-1443] [21:39:20] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/.ipcache -s --output_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int --log_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/logs/link --report_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/reports/link --config /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/vplConfig.ini -k /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link --no-info --iprepo /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0 --messageDb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link/vpl.pb /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform
+[21:39:43] Run vpl: Step create_project: Started
+Creating Vivado project.
+[21:39:47] Run vpl: Step create_project: Completed
+[21:39:47] Run vpl: Step create_bd: Started
+[21:40:40] Run vpl: Step create_bd: Failed
+[21:40:41] Run vpl: FINISHED. Run Status: create_bd ERROR
+ERROR: [VPL 60-773] In '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/runme.log', caught Tcl error:  invalid command name "hbm_memory_subsystem::map_memory_resource"
+WARNING: [VPL 60-732] Link warning: IP ulp_hmss_0_0 is locked. Locked reason: * Newer version is available in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: * IP 'ulp_hmss_0_0' contains one or more locked subcores.* Either run upgrade on the IP or repackage the component using a newer version of the child IP that is currently locked.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_axi_apb_bridge_inst_0 is locked. Locked reason: * IP definition 'AXI APB Bridge (3.0)' for IP 'bd_85ad_axi_apb_bridge_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_hbm_inst_0 is locked. Locked reason: * IP definition 'HBM IP (1.0)' for IP 'bd_85ad_hbm_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_init_concat_0 is locked. Locked reason: * IP definition 'Concat (2.1)' for IP 'bd_85ad_init_concat_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_interconnect0_12_0 is locked. Locked reason: * IP definition 'AXI SmartConnect (1.0)' for IP 'bd_85ad_interconnect0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: * IP 'bd_85ad_interconnect0_12_0' contains one or more locked subcores.* Please repackage the parent IP 'bd_85ad'.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_slice0_12_0 is locked. Locked reason: * IP definition 'AXI Register Slice (2.1)' for IP 'bd_85ad_slice0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_util_vector_logic_0 is locked. Locked reason: * IP definition 'Utility Vector Logic (2.0)' for IP 'bd_85ad_util_vector_logic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_85ad_vip_S00_0 is locked. Locked reason: * IP definition 'AXI Verification IP (1.1)' for IP 'bd_85ad_vip_S00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_m00e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_af07_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_m00s2a_0 is locked. Locked reason: * IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_af07_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_one_0 is locked. Locked reason: * IP definition 'Constant (1.1)' for IP 'bd_af07_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_s00a2s_0 is locked. Locked reason: * IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_af07_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_s00mmu_0 is locked. Locked reason: * IP definition 'SC MMU (1.0)' for IP 'bd_af07_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_s00sic_0 is locked. Locked reason: * IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_af07_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_s00tr_0 is locked. Locked reason: * IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_af07_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_sarn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_sawn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_sbn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_srn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+WARNING: [VPL 60-732] Link warning: IP bd_af07_swn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [VPL 60-732] Link warning: .
+ERROR: [VPL 60-704] Integration error, Failed to update block diagram in project required for hardware synthesis.The project is 'prj'. The block diagram update script is '.local/dr.bd.tcl'. The block diagram update script was generated by system linker. An error stack with function names and arguments may be available in the 'vivado.log'.
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+WARNING: [VPL 60-1142] Unable to read data from '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/output/generated_reports.log', generated reports will not be copied.
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [21:40:42] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:00:06 ; elapsed = 00:01:22 . Memory (MB): peak = 2208.578 ; gain = 0.000 ; free physical = 23536 ; free virtual = 69550
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

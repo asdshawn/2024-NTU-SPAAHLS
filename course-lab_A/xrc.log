@@ -1,0 +1,12 @@
+Fri Nov  8 21:39:08 2024: Server was asked to start on port: '33571'
+Fri Nov  8 21:39:08 2024: Server is using token UUID: 'c4dcf8a3-9cad-4493-ad70-a54d7e60753d'
+Fri Nov  8 21:39:08 2024: Attempting to start server on port '33571'
+Fri Nov  8 21:39:08 2024: XRC main fifo: created main fifo '/tmp/xrcmainc4dcf8a3-9cad-4493-ad70-a54d7e60753d', fd read = 13
+Fri Nov  8 21:39:08 2024: Running Rule Check Server
+Fri Nov  8 21:39:08 2024: Version 1.6.1
+Fri Nov  8 21:39:08 2024: Rule Check Server: Accepted socket connection from client
+Fri Nov  8 21:39:08 2024: EXCHANGE_TOKEN received, server token: c4dcf8a3-9cad-4493-ad70-a54d7e60753d, passed token: c4dcf8a3-9cad-4493-ad70-a54d7e60753d
+Fri Nov  8 21:39:08 2024: SESSION_MGR: creating session with session uuid: '152d91cd-b6df-45c8-8391-bc957a42ce06' and name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:39:11 2024: Rule Check Server: Accepted socket connection from client
+Fri Nov  8 21:39:43 2024: Rule Check Server: Accepted socket connection from client
+Fri Nov  8 21:40:42 2024: SESSION_MGR: closing session for UUID '152d91cd-b6df-45c8-8391-bc957a42ce06' with name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'

@@ -1,0 +1,18 @@
+{
+    "kernelContainerValues": [
+        "pass:xo"
+    ],
+    "compile": "false",
+    "debug": "false",
+    "exportScript": "false",
+    "gccHostCompile": "false",
+    "generateEstimateRpt": "false",
+    "keepSolution": "false",
+    "link": "false",
+    "logDir": "\/mnt\/HLSNAS\/02.IZunsR\/course-lab_A\/Vitis-Tutorials\/Hardware_Acceleration\/Design_Tutorials\/07-host-code-opt\/reference-files\/_x\/logs\/link",
+    "package": "false",
+    "reportDir": "\/mnt\/HLSNAS\/02.IZunsR\/course-lab_A\/Vitis-Tutorials\/Hardware_Acceleration\/Design_Tutorials\/07-host-code-opt\/reference-files\/_x\/reports\/link",
+    "saveTemps": "false",
+    "verbose": "false",
+    "vplNoIpCache": "false"
+}

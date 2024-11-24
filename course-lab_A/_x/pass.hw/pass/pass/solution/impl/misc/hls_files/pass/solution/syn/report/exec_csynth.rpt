@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'exec'
+================================================================
+* Date:           Fri Nov  8 21:38:41 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        pass
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                         |                               |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                 Instance                |             Module            |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60  |exec_Pipeline_VITIS_LOOP_23_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|     101|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|     1676|     675|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|      74|    -|
+|Register             |        -|     -|      103|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|     1779|     850|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+-------------------------------+---------+----+------+-----+-----+
+    |                 Instance                |             Module            | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +-----------------------------------------+-------------------------------+---------+----+------+-----+-----+
+    |grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60  |exec_Pipeline_VITIS_LOOP_23_1  |        0|   0|  1676|  675|    0|
+    +-----------------------------------------+-------------------------------+---------+----+------+-----+-----+
+    |Total                                    |                               |        0|   0|  1676|  675|    0|
+    +-----------------------------------------+-------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+----+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+----+---+----+------------+------------+
+    |add_ln23_fu_77_p2  |         +|   0|  0|  39|          32|           2|
+    |add_ln25_fu_86_p2  |         +|   0|  0|  40|          33|           1|
+    |cmp29_fu_71_p2     |      icmp|   0|  0|  20|          32|           1|
+    |ap_block_state1    |        or|   0|  0|   2|           1|           1|
+    +-------------------+----------+----+---+----+------------+------------+
+    |Total              |          |   0|  0| 101|          98|           5|
+    +-------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  20|          4|    1|          4|
+    |ap_done             |   9|          2|    1|          2|
+    |inStream2_read      |   9|          2|    1|          2|
+    |numInputs_blk_n     |   9|          2|    1|          2|
+    |numInputs_c_blk_n   |   9|          2|    1|          2|
+    |outStream3_write    |   9|          2|    1|          2|
+    |processDelay_blk_n  |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  74|         16|    7|         16|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------+----+----+-----+-----------+
+    |                         Name                         | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |add_ln23_reg_103                                      |  32|   0|   32|          0|
+    |add_ln25_reg_108                                      |  33|   0|   33|          0|
+    |ap_CS_fsm                                             |   3|   0|    3|          0|
+    |ap_done_reg                                           |   1|   0|    1|          0|
+    |cmp29_reg_98                                          |   1|   0|    1|          0|
+    |grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60_ap_start_reg  |   1|   0|    1|          0|
+    |numInputs_read_reg_93                                 |  32|   0|   32|          0|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                 | 103|   0|  103|          0|
+    +------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+--------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|          exec|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|          exec|  return value|
+|inStream2_dout               |   in|  512|     ap_fifo|     inStream2|       pointer|
+|inStream2_num_data_valid     |   in|    2|     ap_fifo|     inStream2|       pointer|
+|inStream2_fifo_cap           |   in|    2|     ap_fifo|     inStream2|       pointer|
+|inStream2_empty_n            |   in|    1|     ap_fifo|     inStream2|       pointer|
+|inStream2_read               |  out|    1|     ap_fifo|     inStream2|       pointer|
+|outStream3_din               |  out|  512|     ap_fifo|    outStream3|       pointer|
+|outStream3_num_data_valid    |   in|    2|     ap_fifo|    outStream3|       pointer|
+|outStream3_fifo_cap          |   in|    2|     ap_fifo|    outStream3|       pointer|
+|outStream3_full_n            |   in|    1|     ap_fifo|    outStream3|       pointer|
+|outStream3_write             |  out|    1|     ap_fifo|    outStream3|       pointer|
+|numInputs_dout               |   in|   32|     ap_fifo|     numInputs|       pointer|
+|numInputs_num_data_valid     |   in|    2|     ap_fifo|     numInputs|       pointer|
+|numInputs_fifo_cap           |   in|    2|     ap_fifo|     numInputs|       pointer|
+|numInputs_empty_n            |   in|    1|     ap_fifo|     numInputs|       pointer|
+|numInputs_read               |  out|    1|     ap_fifo|     numInputs|       pointer|
+|processDelay_dout            |   in|   32|     ap_fifo|  processDelay|       pointer|
+|processDelay_num_data_valid  |   in|    3|     ap_fifo|  processDelay|       pointer|
+|processDelay_fifo_cap        |   in|    3|     ap_fifo|  processDelay|       pointer|
+|processDelay_empty_n         |   in|    1|     ap_fifo|  processDelay|       pointer|
+|processDelay_read            |  out|    1|     ap_fifo|  processDelay|       pointer|
+|numInputs_c_din              |  out|   32|     ap_fifo|   numInputs_c|       pointer|
+|numInputs_c_num_data_valid   |   in|    2|     ap_fifo|   numInputs_c|       pointer|
+|numInputs_c_fifo_cap         |   in|    2|     ap_fifo|   numInputs_c|       pointer|
+|numInputs_c_full_n           |   in|    1|     ap_fifo|   numInputs_c|       pointer|
+|numInputs_c_write            |  out|    1|     ap_fifo|   numInputs_c|       pointer|
++-----------------------------+-----+-----+------------+--------------+--------------+
+

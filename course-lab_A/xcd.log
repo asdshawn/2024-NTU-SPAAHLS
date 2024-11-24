@@ -1,0 +1,56 @@
+Fri Nov  8 21:38:18 2024: Running xcd server. This server was built by gradle.
+Fri Nov  8 21:38:18 2024: Server was asked to start on port: '39455'
+Fri Nov  8 21:38:18 2024: Server is using token UUID: '21bea1bd-2905-4606-a69c-851ddd092d92'
+Fri Nov  8 21:38:18 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Nov  8 21:38:18 2024: Attempting to start server on port '39455'
+Fri Nov  8 21:38:18 2024: XCD main fifo: created main fifo '/tmp/xcdmain21bea1bd-2905-4606-a69c-851ddd092d92', fd read = 13
+Fri Nov  8 21:38:18 2024: Running Dispatch Server
+Fri Nov  8 21:38:18 2024: Version 2.2.0
+Fri Nov  8 21:38:27 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov  8 21:38:27 2024: Starting Socket connection
+Fri Nov  8 21:38:27 2024: EXCHANGE_TOKEN received, server token: 21bea1bd-2905-4606-a69c-851ddd092d92, passed token: 21bea1bd-2905-4606-a69c-851ddd092d92
+Fri Nov  8 21:38:28 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Nov  8 21:38:28 2024: SESSION_MGR: creating session with session uuid: '07e2e566-4314-4439-a987-6942f8677b86' and name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:28 2024: KERNEL_SVC: creating session with uuid: '07e2e566-4314-4439-a987-6942f8677b86' and name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:28 2024: GUIDANCE_SMGR: creating guidance session with uuid: '07e2e566-4314-4439-a987-6942f8677b86' and name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:28 2024: SYSTEM_DIAGRAM: creating session with uuid: '07e2e566-4314-4439-a987-6942f8677b86' and name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:56 2024: SESSION_MGR: closing session for UUID '07e2e566-4314-4439-a987-6942f8677b86' with name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:56 2024: KERNEL_SVC: closing session for UUID '07e2e566-4314-4439-a987-6942f8677b86' with name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:56 2024: GUIDANCE_SMGR: closing session for UUID '07e2e566-4314-4439-a987-6942f8677b86' with name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:56 2024: SYSTEM_DIAGRAM: closing session for UUID '07e2e566-4314-4439-a987-6942f8677b86' with name 'v++_compile_pass.hw'
+Fri Nov  8 21:38:56 2024: STOP_SERVER received, server token: 21bea1bd-2905-4606-a69c-851ddd092d92, passed token: 21bea1bd-2905-4606-a69c-851ddd092d92
+Fri Nov  8 21:38:56 2024: Socket received request to stop server.
+Fri Nov  8 21:38:56 2024: Dispatch Server: do_await_stop
+Fri Nov  8 21:38:56 2024: Dispatch Server: stopping mainFifo_
+Fri Nov  8 21:38:56 2024: XCD main fifo: Stopping
+Fri Nov  8 21:38:56 2024: XCD main fifo: do_read error code: Operation canceled
+Fri Nov  8 21:38:56 2024: XCD main fifo: bytes_transferred: 0
+Fri Nov  8 21:38:56 2024: SERVER: destructor for server bound to port 39455
+Fri Nov  8 21:38:56 2024: XCD main fifo: Good unlink of /tmp/xcdmain21bea1bd-2905-4606-a69c-851ddd092d92
+Fri Nov  8 21:38:56 2024: Server exiting with status 0.
+Fri Nov  8 21:38:56 2024: Closing log file.
+Fri Nov  8 21:38:58 2024: Running xcd server. This server was built by gradle.
+Fri Nov  8 21:38:58 2024: Server was asked to start on port: '43193'
+Fri Nov  8 21:38:58 2024: Server is using token UUID: '013f2302-19e9-4784-8b67-c3bca304eb8b'
+Fri Nov  8 21:38:58 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Nov  8 21:38:58 2024: Attempting to start server on port '43193'
+Fri Nov  8 21:38:58 2024: XCD main fifo: created main fifo '/tmp/xcdmain013f2302-19e9-4784-8b67-c3bca304eb8b', fd read = 13
+Fri Nov  8 21:38:58 2024: Running Dispatch Server
+Fri Nov  8 21:38:58 2024: Version 2.2.0
+Fri Nov  8 21:39:07 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov  8 21:39:07 2024: Starting Socket connection
+Fri Nov  8 21:39:07 2024: EXCHANGE_TOKEN received, server token: 013f2302-19e9-4784-8b67-c3bca304eb8b, passed token: 013f2302-19e9-4784-8b67-c3bca304eb8b
+Fri Nov  8 21:39:07 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Fri Nov  8 21:39:07 2024: SESSION_MGR: creating session with session uuid: 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' and name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:39:07 2024: KERNEL_SVC: creating session with uuid: 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' and name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:39:07 2024: GUIDANCE_SMGR: creating guidance session with uuid: 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' and name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:39:07 2024: SYSTEM_DIAGRAM: creating session with uuid: 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' and name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:39:21 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov  8 21:39:21 2024: Starting Socket connection
+Fri Nov  8 21:39:43 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov  8 21:39:43 2024: Starting Socket connection
+Fri Nov  8 21:40:43 2024: SESSION_MGR: closing session for UUID 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' with name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:40:43 2024: KERNEL_SVC: closing session for UUID 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' with name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:40:43 2024: GUIDANCE_SMGR: closing session for UUID 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' with name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:40:43 2024: SYSTEM_DIAGRAM: closing session for UUID 'c8dd2391-f17d-4ab4-9f3e-f93aec685fbb' with name 'v++_link_pass.hw.xilinx_u50_gen3x16_xdma_201920_3'
+Fri Nov  8 21:40:43 2024: STOP_SERVER received, server token: 013f2302-19e9-4784-8b67-c3bca304eb8b, passed token: 013f2302-19e9-4784-8b67-c3bca304eb8b

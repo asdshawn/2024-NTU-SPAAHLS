@@ -1,0 +1,525 @@
+
+*** Running vivado
+    with args -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source vpl.tcl -notrace
+INFO: Dispatch client connection id - 43193
+WARNING: failed to connect to dispatch server - client already initialized
+[21:39:43] Run vpl: Step create_project: Started
+INFO: [OCL_UTIL] current step: vpl.create_project
+Creating Vivado project.
+INFO: [OCL_UTIL] internal step: source .local/hw_platform/tcl_hooks/prelink.tcl
+INFO: [OCL_UTIL] internal step: create_project -part xcu50-fsvh2104-2-e -force prj prj
+INFO: [OCL_UTIL] set_property design_mode GateLvl [current_fileset]
+INFO: [Vivado 12-3498] Setting project source management mode (property SOURCE_MGMT_MODE) to "None".
+INFO: [OCL_UTIL] set_property PR_FLOW 1 [current_project]
+INFO: [OCL_UTIL] internal step: add_files .local/hw_platform/hw_bb_locked.dcp
+INFO: [OCL_UTIL] internal step: create_partition_def -name my_pd -module ulp
+INFO: [OCL_UTIL] internal step: create_reconfig_module -name my_rm -partition_def [get_partition_defs my_pd ] -top ulp
+INFO: [OCL_UTIL] set_property use_blackbox_stub false [get_filesets my_rm -of_objects [get_reconfig_modules my_rm]]
+INFO: [OCL_UTIL] set_property USE_BLACKBOX_STUB 0 [get_partition_defs my_pd]
+INFO: [OCL_UTIL] internal step: create_pr_configuration -name config_1 -partitions [list level0_i/ulp:my_rm]
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset my_rm.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+INFO: [OCL_UTIL] set_property AUTO_IMPORT 0 [get_pr_configuration config_1]
+INFO: [OCL_UTIL] set_property USE_BLACKBOX 0 [get_pr_configuration config_1]
+[21:39:47] Run vpl: Step create_project: Completed
+[21:39:47] Run vpl: Step create_bd: Started
+INFO: [OCL_UTIL] current step: vpl.create_bd
+INFO: [OCL_UTIL] set_property board_part_repo_paths .local/hw_platform/board [current_project]
+INFO: [OCL_UTIL] set_property board_part xilinx.com:au50:part0:1.0 [current_project]
+INFO: [OCL_UTIL] set_property ip_repo_paths /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0 .local/hw_platform/iprepo /opt/Xilinx/Vitis/2022.1/data/cache/xilinx .local/hw_platform/ipcache /opt/Xilinx/Vitis/2022.1/data/ip [current_project]
+INFO: [OCL_UTIL] internal step: update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_pass_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2022.1/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/opt/Xilinx/Vitis/2022.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/ii_infra_ipdefs/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/ii_infra_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/ii_infra_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:shell_utils_build_info:1.0'. The one found in IP location '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/shell_utils_build_info_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+INFO: [OCL_UTIL] internal step: config_ip_cache -use_cache_location /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/.ipcache
+INFO: [OCL_UTIL] internal step: import_files -norecurse .local/hw_platform/bd/ulp.bd -of_objects my_rm
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/synth/ulp.v' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/sim/ulp.v' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/ulp_ooc.xdc' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/hw_handoff/ulp.hwh' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/hw_handoff/ulp_bd.tcl' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/synth/ulp.hwdef' referenced by design 'ulp' could not be found.
+WARNING: [BD 41-2576] File '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/sim/ulp.protoinst' referenced by design 'ulp' could not be found.
+INFO: [Project 1-1727] Source BDs should be added before importing the top BD /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/ulp.bd with BDC
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'ulp.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+ulp_axi_cdc_data_1
+ulp_regslice_data_1
+ulp_axi_vip_ctrl_userpf_1
+ulp_regslice_control_userpf_1
+ulp_axi_gpio_null_1
+ulp_regslice_data_0
+ulp_interconnect_axilite_user_0
+ulp_xlconcat_interrupt_0_0
+ulp_axi_vip_data_0
+ulp_axi_vip_data_1
+ulp_xlconcat_interrupt_2_0
+ulp_interconnect_axilite_user_1
+ulp_axi_vip_ctrl_userpf_0
+ulp_axi_data_sc_0
+ulp_hmss_0_0
+ulp_memory_subsystem_0
+ulp_s00_regslice_4
+ulp_debug_bridge_xsdbm_0
+ulp_xlconcat_interrupt_3_0
+ulp_ii_level0_wire_0
+ulp_user_debug_bridge_0
+ulp_s00_regslice_5
+ulp_ulp_ucs_0
+ulp_axi_cdc_data_0
+ulp_xlconcat_interrupt_0
+ulp_xlconcat_interrupt_1_0
+ulp_xlconstant_gnd_0
+ulp_axi_vip_data_2
+ulp_workaround_cr1039626_orgate_0
+ulp_xlconstant_gnd128_0
+ulp_regslice_control_userpf_0
+ulp_axi_gpio_null_0
+
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_ctrl_mgmt_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_ctrl_mgmt_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_ctrl_mgmt_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_ctrl_mgmt_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_ctrl_mgmt_01_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_ctrl_mgmt_01_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_ctrl_mgmt_01_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_ctrl_mgmt_01_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_ctrl_user_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_ctrl_user_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_ctrl_user_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_ctrl_user_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_ctrl_user_01_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_ctrl_user_01_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_ctrl_user_01_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_ctrl_user_01_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_ctrl_user_02_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_ctrl_user_02_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_ctrl_user_02_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_ctrl_user_02_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_s_ip_axi_data_h2c_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_s_ip_axi_data_h2c_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_5941_m_ip_axi_data_h2c_00_0' is locked:
+* IP definition 'AXI Register Slice (2.1)' for IP 'bd_5941_m_ip_axi_data_h2c_00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'ii_level0_wire_pxi_ii_core_0' is locked:
+* IP 'ii_level0_wire_pxi_ii_core_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'ulp_ii_level0_wire_0' is locked:
+* IP 'ulp_ii_level0_wire_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'ulp_user_debug_bridge_0' is locked:
+* IP definition 'Debug Bridge (3.0)' for IP 'ulp_user_debug_bridge_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'ulp_debug_bridge_xsdbm_0' is locked:
+* IP definition 'Debug Bridge (3.0)' for IP 'ulp_debug_bridge_xsdbm_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_one_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'bd_8783_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_s00mmu_0' is locked:
+* IP definition 'SC MMU (1.0)' for IP 'bd_8783_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_s00tr_0' is locked:
+* IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_8783_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_s00sic_0' is locked:
+* IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_8783_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_s00a2s_0' is locked:
+* IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_8783_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_sarn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_srn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_sawn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_swn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_sbn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_8783_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00arn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m00arn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00rn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m00rn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00awn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m00awn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00wn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m00wn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00bn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m00bn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m00e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_8783_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_8783_m01s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01arn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m01arn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01rn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m01rn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01awn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m01awn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01wn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m01wn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01bn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_8783_m01bn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_8783_m01e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_8783_m01e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_b35e_interconnect_S00_AXI_0' is locked:
+* IP definition 'AXI SmartConnect (1.0)' for IP 'bd_b35e_interconnect_S00_AXI_0' (customized with software release 2019.2) has a different revision in the IP Catalog. * IP 'bd_b35e_interconnect_S00_AXI_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_one_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'bd_4793_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_s00mmu_0' is locked:
+* IP definition 'SC MMU (1.0)' for IP 'bd_4793_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_s00tr_0' is locked:
+* IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_4793_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_s00sic_0' is locked:
+* IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_4793_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_s00a2s_0' is locked:
+* IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_4793_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_sarn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_srn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_sawn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_swn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_sbn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_4793_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00arn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m00arn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00rn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m00rn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00awn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m00awn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00wn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m00wn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00bn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m00bn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m00e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_4793_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_4793_m01s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01arn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m01arn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01rn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m01rn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01awn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m01awn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01wn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m01wn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01bn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_4793_m01bn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_4793_m01e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_4793_m01e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_b35e_interconnect_S01_AXI_0' is locked:
+* IP definition 'AXI SmartConnect (1.0)' for IP 'bd_b35e_interconnect_S01_AXI_0' (customized with software release 2019.2) has a different revision in the IP Catalog. * IP 'bd_b35e_interconnect_S01_AXI_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_one_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'bd_2551_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_s00mmu_0' is locked:
+* IP definition 'SC MMU (1.0)' for IP 'bd_2551_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_s00tr_0' is locked:
+* IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_2551_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_s00sic_0' is locked:
+* IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_2551_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_s00a2s_0' is locked:
+* IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_2551_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_sarn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_2551_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_srn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_2551_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_sawn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_2551_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_swn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_2551_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_sbn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_2551_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_m00s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_2551_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_2551_m00e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_2551_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_b35e_interconnect_PLRAM_MEM00_0' is locked:
+* IP definition 'AXI SmartConnect (1.0)' for IP 'bd_b35e_interconnect_PLRAM_MEM00_0' (customized with software release 2019.2) has a different revision in the IP Catalog. * IP 'bd_b35e_interconnect_PLRAM_MEM00_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_one_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'bd_e500_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_s00mmu_0' is locked:
+* IP definition 'SC MMU (1.0)' for IP 'bd_e500_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_s00tr_0' is locked:
+* IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_e500_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_s00sic_0' is locked:
+* IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_e500_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_s00a2s_0' is locked:
+* IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_e500_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_sarn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e500_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_srn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e500_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_sawn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e500_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_swn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e500_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_sbn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e500_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_m00s2a_0' is locked:
+* IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_e500_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e500_m00e_0' is locked:
+* IP definition 'SC EXIT (1.0)' for IP 'bd_e500_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_b35e_interconnect_PLRAM_MEM01_0' is locked:
+* IP definition 'AXI SmartConnect (1.0)' for IP 'bd_b35e_interconnect_PLRAM_MEM01_0' (customized with software release 2019.2) has a different revision in the IP Catalog. * IP 'bd_b35e_interconnect_PLRAM_MEM01_0' contains one or more locked subcores.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_one_0' is locked:
+* IP definition 'Constant (1.1)' for IP 'bd_e5f0_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_s00mmu_0' is locked:
+* IP definition 'SC MMU (1.0)' for IP 'bd_e5f0_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_s00tr_0' is locked:
+* IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_e5f0_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_s00sic_0' is locked:
+* IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_e5f0_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_s00a2s_0' is locked:
+* IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_e5f0_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_sarn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e5f0_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_srn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e5f0_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+WARNING: [IP_Flow 19-2162] IP 'bd_e5f0_sawn_0' is locked:
+* IP definition 'SmartConnect Node (1.0)' for IP 'bd_e5f0_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+INFO: [Common 17-14] Message 'IP_Flow 19-2162' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/synth/ulp.v' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/synth/ulp.v'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/sim/ulp.v' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/sim/ulp.v'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/ulp_ooc.xdc' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ulp_ooc.xdc'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/hw_handoff/ulp.hwh' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/hw_handoff/ulp.hwh'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/hw_handoff/ulp_bd.tcl' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/hw_handoff/ulp_bd.tcl'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/synth/ulp.hwdef' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/synth/ulp.hwdef'
+CRITICAL WARNING: [BD 41-2597] Failed to copy '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/.local/hw_platform/bd/sim/ulp.protoinst' to '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/sim/ulp.protoinst'
+import_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:32 . Memory (MB): peak = 2924.410 ; gain = 0.000 ; free physical = 24786 ; free virtual = 70904
+INFO: [OCL_UTIL] set_property synth_checkpoint_mode Hierarchical [get_files -all ulp.bd]
+INFO: [OCL_UTIL] internal step: open_bd_design -auto_upgrade [get_files ulp.bd]
+Reading block design file </mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ulp.bd>...
+Adding component instance block -- xilinx.com:ip:ii_level0_wire:1.0 - ii_level0_wire
+Adding component instance block -- xilinx.com:ip:debug_bridge:3.0 - user_debug_bridge
+Adding component instance block -- xilinx.com:ip:debug_bridge:3.0 - debug_bridge_xsdbm
+Adding component instance block -- xilinx.com:ip:sdx_memory_subsystem:1.0 - memory_subsystem
+Adding component instance block -- xilinx.com:ip:hbm_memory_subsystem:1.0 - hmss_0
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_data
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_data_sc
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - satellite_gpio_slice_1
+Adding component instance block -- xilinx.com:ip:shell_ucs_subsystem:2.0 - ulp_ucs
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_ctrl_slr0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_ctrl_slr1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_kernel_slr0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_kernel_slr1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_kernel2_slr0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_kernel2_slr1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_interrupt_3
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_gnd
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - workaround_cr1039626_orgate
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_gnd128
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_null
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_ctrl_userpf
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - interconnect_axilite_user
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - regslice_control_userpf
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - regslice_data
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - axi_cdc_data
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_data
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_null
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_ctrl_userpf
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - interconnect_axilite_user
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - regslice_control_userpf
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - regslice_data
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - axi_cdc_data
+Adding component instance block -- xilinx.com:ip:axi_vip:1.1 - axi_vip_data
+Successfully read diagram <ulp> from block design file </mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ulp.bd>
+WARNING: [BD 41-1287] Associated interface by name blp_m_data_hbm_temp_00 not found for clock port /blp_s_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name blp_m_data_hbm_temp_01 not found for clock port /blp_s_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name blp_m_data_memory_calib_complete_00 not found for clock port /blp_s_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name blp_m_irq_hbm_cattrip_00 not found for clock port /blp_s_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name blp_s_data_satellite_ctrl_data_00 not found for clock port /blp_s_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name ulp_m_data_satellite_ctrl_data_00 not found for clock port /ulp_m_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name ulp_s_data_memory_calib_complete_00 not found for clock port /ulp_m_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name ulp_s_data_hbm_temp_00 not found for clock port /ulp_m_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name ulp_s_data_hbm_temp_01 not found for clock port /ulp_m_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name ulp_s_irq_hbm_cattrip_00 not found for clock port /ulp_m_aclk_ctrl_00
+WARNING: [BD 41-1287] Associated interface by name blp_m_irq_cu_00 not found for clock port /blp_s_aclk_pcie_00
+WARNING: [BD 41-1287] Associated interface by name ulp_s_irq_cu_00 not found for clock port /ulp_m_aclk_pcie_00
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+INFO: [IP_Flow 19-3422] Upgraded ulp_interconnect_axilite_user_0 (AXI Interconnect 2.1) from revision 21 to revision 27
+INFO: [IP_Flow 19-3422] Upgraded ulp_interconnect_axilite_user_1 (AXI Interconnect 2.1) from revision 21 to revision 27
+INFO: [BD 41-1799] The block design contains upgradeable cell(s), automatically upgrading to newest version...
+CRITICAL WARNING: [filemgmt 20-1366] Unable to reset target(s) for the following file is locked: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/bd/ip/ulp_ii_level0_wire_0/bd_0/bd_5941.bd
+Locked reason: 
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+bd_5941_m_ip_axi_data_h2c_00_0
+bd_5941_s_ip_axi_data_h2c_00_0
+bd_5941_s_ip_axi_ctrl_user_02_0
+bd_5941_m_ip_axi_ctrl_user_01_0
+bd_5941_m_ip_axi_ctrl_mgmt_00_0
+bd_5941_m_ip_axi_ctrl_mgmt_01_0
+bd_5941_s_ip_axi_ctrl_mgmt_01_0
+bd_5941_s_ip_axi_ctrl_mgmt_00_0
+bd_5941_m_ip_axi_ctrl_user_02_0
+bd_5941_s_ip_axi_ctrl_user_00_0
+bd_5941_s_ip_axi_ctrl_user_01_0
+bd_5941_m_ip_axi_ctrl_user_00_0
+
+INFO: [IP_Flow 19-3420] Updated ulp_ii_level0_wire_0 to use current project options
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_user_debug_bridge_0:  Update boundary has completed 
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_user_debug_bridge_0:  Update boundary has started running 
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_user_debug_bridge_0:  Update content has started running 
+INFO: [IP_Flow 19-3422] Upgraded ulp_user_debug_bridge_0 (Debug Bridge 3.0) from revision 5 to revision 8
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_debug_bridge_xsdbm_0:  Update boundary has completed 
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_debug_bridge_xsdbm_0:  Update boundary has started running 
+INFO: [xilinx.com:ip:debug_bridge:3.0-0] ulp_debug_bridge_xsdbm_0:  Update content has started running 
+INFO: [IP_Flow 19-3422] Upgraded ulp_debug_bridge_xsdbm_0 (Debug Bridge 3.0) from revision 5 to revision 8
+INFO: [IP_Flow 19-3422] Upgraded ulp_memory_subsystem_0 (SDx Memory Subsystem 1.0) from revision 5 to revision 13
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_vip_data_0 (AXI Verification IP 1.1) from revision 6 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_data_sc_0 (AXI SmartConnect 1.0) from revision 12 to revision 18
+WARNING: [BD 41-1753] The name 'fanout_aresetn_kernel_slr0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+WARNING: [BD 41-1753] The name 'fanout_aresetn_kernel2_slr0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+WARNING: [BD 41-1753] The name 'fanout_aresetn_kernel_slr1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+WARNING: [BD 41-1753] The name 'fanout_aresetn_kernel2_slr1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+WARNING: [BD 41-1306] The connection to interface pin </gpio_gapping_demand/gpio_io_o> is being overridden by the user with net <gpio_gapping_demand>. This pin will not be connected as a part of interface connection <GPIO>.
+WARNING: [BD 41-1306] The connection to interface pin </axi_ic_ctrl_mgmt_0/M01_AXI_bvalid> is being overridden by the user with net <gapping_demand_bvalid>. This pin will not be connected as a part of interface connection <M01_AXI>.
+WARNING: [BD 41-1306] The connection to interface pin </gpio_gapping_demand/s_axi_bvalid> is being overridden by the user with net <gapping_demand_bvalid>. This pin will not be connected as a part of interface connection <S_AXI>.
+WARNING: [BD 41-1306] The connection to interface pin </axi_ic_ctrl_mgmt_0/M01_AXI_bready> is being overridden by the user with net <gapping_demand_bready>. This pin will not be connected as a part of interface connection <M01_AXI>.
+WARNING: [BD 41-1306] The connection to interface pin </gpio_gapping_demand/s_axi_bready> is being overridden by the user with net <gapping_demand_bready>. This pin will not be connected as a part of interface connection <S_AXI>.
+WARNING: [BD 41-1306] The connection to interface pin </gpio_ucs_control_status/gpio2_io_o> is being overridden by the user with net <gpio_ucs_control_status_gpio2>. This pin will not be connected as a part of interface connection <GPIO2>.
+WARNING: [BD 41-1306] The connection to interface pin </gpio_ucs_control_status/gpio_io_i> is being overridden by the user with net <gpio_ucs_status_concat_dout>. This pin will not be connected as a part of interface connection <GPIO>.
+Slave segment '/build_info/S_AXI/reg0' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_0000 [ 4K ]>.
+Slave segment '/gpio_gapping_demand/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_1000 [ 4K ]>.
+Slave segment '/gpio_ucs_control_status/S_AXI/Reg' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_2000 [ 4K ]>.
+Slave segment '/clkwiz_kernel/s_axi_lite/Reg' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_3000 [ 4K ]>.
+Slave segment '/clkwiz_kernel2/s_axi_lite/Reg' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_4000 [ 4K ]>.
+Slave segment '/frequency_counter_kernel/S_AXI/reg0' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_5000 [ 4K ]>.
+Slave segment '/frequency_counter_kernel2/S_AXI/reg0' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_6000 [ 4K ]>.
+Slave segment '/frequency_counter_aclk/S_AXI/reg0' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_9000 [ 4K ]>.
+Slave segment '/clkwiz_hbm/s_axi_lite/Reg' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_7000 [ 4K ]>.
+Slave segment '/frequency_counter_hbm/S_AXI/reg0' is being assigned into address space '/s_axi_ctrl_mgmt' at <0x0000_8000 [ 4K ]>.
+Address Space </s_axi_ctrl_mgmt> has no unaddressed segments
+xit::source_ipfile: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3623.027 ; gain = 37.625 ; free physical = 23450 ; free virtual = 69494
+INFO: [IP_Flow 19-3420] Updated ulp_ulp_ucs_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 's_axi_ctrl_mgmt_araddr' width 32 differs from original width 16
+WARNING: [IP_Flow 19-4706] Upgraded port 's_axi_ctrl_mgmt_awaddr' width 32 differs from original width 16
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arburst'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arcache'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arlen'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arlock'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arqos'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arregion'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_arsize'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awburst'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awcache'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awlen'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awlock'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awqos'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awregion'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_awsize'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_rlast'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 's_axi_ctrl_mgmt_wlast'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ulp_ulp_ucs_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ulp_ulp_ucs_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconcat_interrupt_0 (Concat 2.1) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconcat_interrupt_0_0 (Concat 2.1) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconcat_interrupt_1_0 (Concat 2.1) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconcat_interrupt_2_0 (Concat 2.1) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconcat_interrupt_3_0 (Concat 2.1) from revision 3 to revision 4
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconstant_gnd_0 (Constant 1.1) from revision 6 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded ulp_workaround_cr1039626_orgate_0 (Utility Vector Logic 2.0) from revision 1 to revision 2
+INFO: [IP_Flow 19-3422] Upgraded ulp_xlconstant_gnd128_0 (Constant 1.1) from revision 6 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_gpio_null_0 (AXI GPIO 2.0) from revision 22 to revision 28
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_vip_ctrl_userpf_0 (AXI Verification IP 1.1) from revision 6 to revision 12
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of SUPPORTS_NARROW will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_BURST will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_CACHE will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_REGION will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_QOS will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_LOCK will be ignored in validation
+INFO: [IP_Flow 19-3422] Upgraded ulp_regslice_control_userpf_0 (AXI Register Slice 2.1) from revision 20 to revision 26
+INFO: [IP_Flow 19-3422] Upgraded ulp_regslice_data_0 (AXI Register Slice 2.1) from revision 20 to revision 26
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_cdc_data_0 (AXI Clock Converter 2.1) from revision 19 to revision 25
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_vip_data_1 (AXI Verification IP 1.1) from revision 6 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_gpio_null_1 (AXI GPIO 2.0) from revision 22 to revision 28
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_vip_ctrl_userpf_1 (AXI Verification IP 1.1) from revision 6 to revision 12
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of SUPPORTS_NARROW will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_BURST will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_CACHE will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_REGION will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_QOS will be ignored in validation
+WARNING: AXI VIP is in passthrough mode and all user parameters are in propogate mode. Change of HAS_LOCK will be ignored in validation
+INFO: [IP_Flow 19-3422] Upgraded ulp_regslice_control_userpf_1 (AXI Register Slice 2.1) from revision 20 to revision 26
+INFO: [IP_Flow 19-3422] Upgraded ulp_regslice_data_1 (AXI Register Slice 2.1) from revision 20 to revision 26
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_cdc_data_1 (AXI Clock Converter 2.1) from revision 19 to revision 25
+INFO: [IP_Flow 19-3422] Upgraded ulp_axi_vip_data_2 (AXI Verification IP 1.1) from revision 6 to revision 12
+Wrote  : </mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/link/vivado/vpl/prj/prj.srcs/my_rm/bd/bd/ulp.bd> 
+open_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3645.879 ; gain = 683.480 ; free physical = 23422 ; free virtual = 69477
+WARNING: IP ulp_hmss_0_0 is locked. Locked reason: * Newer version is available in the IP Catalog.
+ * IP 'ulp_hmss_0_0' contains one or more locked subcores.* Either run upgrade on the IP or repackage the component using a newer version of the child IP that is currently locked.
+.
+WARNING: IP bd_85ad_axi_apb_bridge_inst_0 is locked. Locked reason: * IP definition 'AXI APB Bridge (3.0)' for IP 'bd_85ad_axi_apb_bridge_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_85ad_hbm_inst_0 is locked. Locked reason: * IP definition 'HBM IP (1.0)' for IP 'bd_85ad_hbm_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_85ad_init_concat_0 is locked. Locked reason: * IP definition 'Concat (2.1)' for IP 'bd_85ad_init_concat_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_85ad_interconnect0_12_0 is locked. Locked reason: * IP definition 'AXI SmartConnect (1.0)' for IP 'bd_85ad_interconnect0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+ * IP 'bd_85ad_interconnect0_12_0' contains one or more locked subcores.* Please repackage the parent IP 'bd_85ad'.
+.
+WARNING: IP bd_85ad_slice0_12_0 is locked. Locked reason: * IP definition 'AXI Register Slice (2.1)' for IP 'bd_85ad_slice0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_85ad_util_vector_logic_0 is locked. Locked reason: * IP definition 'Utility Vector Logic (2.0)' for IP 'bd_85ad_util_vector_logic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_85ad_vip_S00_0 is locked. Locked reason: * IP definition 'AXI Verification IP (1.1)' for IP 'bd_85ad_vip_S00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_m00e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_af07_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_m00s2a_0 is locked. Locked reason: * IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_af07_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_one_0 is locked. Locked reason: * IP definition 'Constant (1.1)' for IP 'bd_af07_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_s00a2s_0 is locked. Locked reason: * IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_af07_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_s00mmu_0 is locked. Locked reason: * IP definition 'SC MMU (1.0)' for IP 'bd_af07_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_s00sic_0 is locked. Locked reason: * IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_af07_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_s00tr_0 is locked. Locked reason: * IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_af07_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_sarn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_sawn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_sbn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_srn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+WARNING: IP bd_af07_swn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+INFO: [OCL_UTIL] internal step: report locked IPs
+INFO: [OCL_UTIL] internal step: source .local/dr.bd.tcl
+ERROR: caught error: invalid command name "hbm_memory_subsystem::map_memory_resource"
+    while executing
+"hbm_memory_subsystem::map_memory_resource \
+  [get_bd_intf_pins -auto_enable /pass_1/m_axi_p0] \
+  [get_bd_cells /hmss_0] [list HBM_MEM00]"
+    (file ".local/dr.bd.tcl" line 55)
+    invoked from within
+"source $dr_bd_tcl"
+[21:40:40] Run vpl: Step create_bd: Failed
+INFO: [OCL_UTIL] current step: vpl.create_bd failed. To rerun the existing project please use --from_step vpl.create_bd
+Failed to update block diagram in project required for hardware synthesis.The project is 'prj'. The block diagram update script is '.local/dr.bd.tcl'. The block diagram update script was generated by system linker. An error stack with function names and arguments may be available in the 'vivado.log'.
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  8 21:40:40 2024...

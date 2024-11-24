@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:component xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="xd" xd:name="dr" xd:version="1.00" xd:type="design">
+  <xd:repository>
+    <xd:file xd:name="xd_ip_db.xml"/>
+  </xd:repository>
+  <xd:instance xd:componentVdr="xilinx.com" xd:componentLib="xd" xd:componentVer="201920.3" xd:componentType="platform" xd:name="xilinx_u50_xdma_201920_3" xd:componentRef="xilinx_u50_xdma_201920_3">
+    <xd:parameter xd:name="NUM_SI" xd:value="1" xd:instanceRef="SLR0/interconnect_axilite_user"/>
+    <xd:parameter xd:name="NUM_MI" xd:value="2" xd:instanceRef="SLR0/interconnect_axilite_user"/>
+    <xd:parameter xd:name="M01_HAS_REGSLICE" xd:value="1" xd:instanceRef="SLR0/interconnect_axilite_user"/>
+    <xd:parameter xd:name="NUM_SI" xd:value="1" xd:instanceRef="SLR1/interconnect_axilite_user"/>
+    <xd:parameter xd:name="NUM_MI" xd:value="1" xd:instanceRef="SLR1/interconnect_axilite_user"/>
+  </xd:instance>
+  <xd:instance xd:componentVdr="xilinx.com" xd:componentLib="hls" xd:componentVer="1.0" xd:componentType="accelerator" xd:name="pass_1" xd:componentRef="pass">
+    <xd:portConfig xd:intfName="m_axi_p0" xd:intfType="intf_pins"/>
+    <xd:portConfig xd:intfName="m_axi_p1" xd:intfType="intf_pins"/>
+  </xd:instance>
+  <xd:connection>
+    <xd:port xd:name="_bd_top_clk_kernel_in" xd:instanceRef="xilinx_u50_xdma_201920_3"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="pass_1"/>
+    <xd:port xd:name="SLR0/interconnect_axilite_user_M01_ACLK" xd:instanceRef="xilinx_u50_xdma_201920_3"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="proc_sys_reset_kernel_slr0_interconnect_aresetn" xd:instanceRef="xilinx_u50_xdma_201920_3"/>
+    <xd:port xd:name="SLR0/interconnect_axilite_user_M01_ARESETN" xd:instanceRef="xilinx_u50_xdma_201920_3"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="proc_sys_reset_kernel_slr0_peripheral_aresetn" xd:instanceRef="xilinx_u50_xdma_201920_3"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="pass_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="SLR0/interconnect_axilite_user_M01_AXI" xd:instanceRef="xilinx_u50_xdma_201920_3" xd:componentRef="axi_interconnect"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="pass_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_p0" xd:instanceRef="pass_1"/>
+    <xd:busInterface xd:name="hmss_0" xd:instanceRef="xilinx_u50_xdma_201920_3" xd:memssSegments="HBM_MEM00" xd:componentRef="hbm_memory_subsystem"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_p1" xd:instanceRef="pass_1"/>
+    <xd:busInterface xd:name="hmss_0" xd:instanceRef="xilinx_u50_xdma_201920_3" xd:memssSegments="HBM_MEM01" xd:componentRef="hbm_memory_subsystem"/>
+  </xd:connection>
+</xd:component>

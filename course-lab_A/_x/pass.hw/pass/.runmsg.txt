@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: pass
+Log file: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/vitis_hls.log

@@ -1,0 +1,1585 @@
+INFO-FLOW: Workspace /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution opened at Fri Nov 08 21:38:32 CST 2024
+Execute       send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute       get_config_interface -m_axi_latency 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_latency=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+Execute       config_interface -m_axi_latency=64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+Execute       config_interface -m_axi_alignment_byte_size=64 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+Execute       config_interface -m_axi_max_widen_bitwidth=512 
+Execute       get_config_interface -default_interface 
+INFO-FLOW: Setting macro_cmd open_solution -flow_target vitis configuration: config_interface -default_interface=kernel
+Execute       config_interface -default_interface=kernel 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_rtl -register_reset_num=3 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+Execute       config_rtl -register_reset_num=3 
+Execute     set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+Execute       create_platform xcu50-fsvh2104-2-e -board  
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+Command       create_platform done; 0.91 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1 sec.
+Execute     create_clock -period 300.000000MHz -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+Execute       ap_set_clock -name default -period 3.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+Execute     config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+Execute     config_export -deadlock_detection sim 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+Execute     config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+Execute     config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+Execute     config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+Execute     config_export -format xo -ipname pass 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname pass 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -hw_syn 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.458 GB.
+INFO: [HLS 200-10] Analyzing design file '/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp as C++
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp -foptimization-record-file=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -I/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_2688.000000_DSP_5952.000000_FF_1743360.000000_LUT_871680.000000_SLICE_108960.000000_SLR_2.000000_URAM_640.000000 > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.cpp.clang.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.cpp.clang.err.log 
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute         set_directive_top pass -name=pass 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_2688.000000_DSP_5952.000000_FF_1743360.000000_LUT_871680.000000_SLICE_108960.000000_SLR_2.000000_URAM_640.000000 > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/clang.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.27 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp std=gnu++14 -target fpga  -directive=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/.systemc_flag -fix-errors /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.24 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp std=gnu++14 -target fpga  -directive=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/all.directive.json -fix-errors /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.36 sec.
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 0.35 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.7 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang-tidy.loop-label.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.42 sec.
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.45 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command         ap_eval done; 0.23 sec.
+Execute         get_top
+Execute           get_top 
+Execute         get_files -fullpath
+Execute           get_files -fullpath 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46:9)
+Execute         send_msg_by_id WARNING @200-471@%s%s 1 /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp -I/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_2688.000000_DSP_5952.000000_FF_1743360.000000_LUT_871680.000000_SLICE_108960.000000_SLR_2.000000_URAM_640.000000 > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.25 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.58 seconds. CPU system time: 0.23 seconds. Elapsed time: 2.35 seconds; current allocated memory: 468.914 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc -args  "/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.g.bc"  
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.g.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc -args /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc -args /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 1.5 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 1.51 sec.
+Execute         run_link_or_opt -opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc -args /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pass -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=pass -reflow-float-conversion -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 0.48 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.49 sec.
+Execute         run_link_or_opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc -args /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc -args /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=pass 
+Execute           ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_solution -flow_target 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_compile -instruction_warning_threshold 
+Execute         get_config_compile -pipeline_loops 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_dataflow -strict_mode 
+Execute         get_config_array_partition -throughput_driven 
+Execute         send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+Execute         is_m_axi_addr64 
+Execute         get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=pass -mllvm -hls-db-dir -mllvm /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=64 -mllvm -no-unaligned-maxi-accesses=false -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -enable-reflow-vitis-flow-setting=true -x ir /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.5.gdce.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_2688.000000_DSP_5952.000000_FF_1743360.000000_LUT_871680.000000_SLICE_108960.000000_SLR_2.000000_URAM_640.000000 > /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 0.42 sec.
+INFO: [HLS 214-241] Aggregating maxi variable 'output' with compact=none mode in 512-bits (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:64:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'input' with compact=none mode in 512-bits (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:64:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_13_1'(/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:13:20) has been inferred on bundle 'p0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:13:20)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_35_1'(/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:35:20) has been inferred on bundle 'p1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:35:20)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_int<512>s' into 'read(ap_int<512> const*, hls::stream<ap_int<512>, 0>&, unsigned int) (.1)' (/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_int<512>s' into 'exec(hls::stream<ap_int<512>, 0>&, hls::stream<ap_int<512>, 0>&, unsigned int, unsigned int) (.1)' (/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml -> /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.9 seconds. CPU system time: 0.29 seconds. Elapsed time: 3 seconds; current allocated memory: 469.980 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 469.980 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top pass -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.0.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 472.488 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.1.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.2.prechk.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 477.223 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.g.1.bc to /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.1.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_1' (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:23) in function 'exec' automatically.
+WARNING: [HLS 200-805] An internal stream 'inStream' (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:51) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'outStream' (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:52) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'pass_dataflow' (/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46:1), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'read'
+	 'exec'
+	 'write'.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.1.tmp.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 503.066 MB.
+Execute           get_config_compile -enable_auto_rewind 
+Execute           get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.2.bc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command           transform done; 0.15 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 573.176 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 0.32 sec.
+Command       elaborate done; 5.69 sec.
+Execute       ap_eval exec zip -j /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'pass' ...
+Execute         ap_set_top_model pass 
+Execute         get_model_list pass -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model pass 
+Execute         preproc_iomode -model pass_dataflow 
+Execute         preproc_iomode -model write 
+Execute         preproc_iomode -model write_Pipeline_VITIS_LOOP_35_1 
+Execute         preproc_iomode -model exec 
+Execute         preproc_iomode -model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         preproc_iomode -model read 
+Execute         preproc_iomode -model read_Pipeline_VITIS_LOOP_13_1 
+Execute         preproc_iomode -model entry_proc 
+Execute         get_model_list pass -filter all-wo-channel 
+INFO-FLOW: Model list for configure: entry_proc read_Pipeline_VITIS_LOOP_13_1 read exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write pass_dataflow pass
+INFO-FLOW: Configuring Module : entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         apply_spec_resource_limit entry_proc 
+INFO-FLOW: Configuring Module : read_Pipeline_VITIS_LOOP_13_1 ...
+Execute         set_default_model read_Pipeline_VITIS_LOOP_13_1 
+Execute         apply_spec_resource_limit read_Pipeline_VITIS_LOOP_13_1 
+INFO-FLOW: Configuring Module : read ...
+Execute         set_default_model read 
+Execute         apply_spec_resource_limit read 
+INFO-FLOW: Configuring Module : exec_Pipeline_VITIS_LOOP_23_1 ...
+Execute         set_default_model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         apply_spec_resource_limit exec_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Configuring Module : exec ...
+Execute         set_default_model exec 
+Execute         apply_spec_resource_limit exec 
+INFO-FLOW: Configuring Module : write_Pipeline_VITIS_LOOP_35_1 ...
+Execute         set_default_model write_Pipeline_VITIS_LOOP_35_1 
+Execute         apply_spec_resource_limit write_Pipeline_VITIS_LOOP_35_1 
+INFO-FLOW: Configuring Module : write ...
+Execute         set_default_model write 
+Execute         apply_spec_resource_limit write 
+INFO-FLOW: Configuring Module : pass_dataflow ...
+Execute         set_default_model pass_dataflow 
+Execute         apply_spec_resource_limit pass_dataflow 
+INFO-FLOW: Configuring Module : pass ...
+Execute         set_default_model pass 
+Execute         apply_spec_resource_limit pass 
+INFO-FLOW: Model list for preprocess: entry_proc read_Pipeline_VITIS_LOOP_13_1 read exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write pass_dataflow pass
+INFO-FLOW: Preprocessing Module: entry_proc ...
+Execute         set_default_model entry_proc 
+Execute         cdfg_preprocess -model entry_proc 
+Execute         rtl_gen_preprocess entry_proc 
+INFO-FLOW: Preprocessing Module: read_Pipeline_VITIS_LOOP_13_1 ...
+Execute         set_default_model read_Pipeline_VITIS_LOOP_13_1 
+Execute         cdfg_preprocess -model read_Pipeline_VITIS_LOOP_13_1 
+Execute         rtl_gen_preprocess read_Pipeline_VITIS_LOOP_13_1 
+INFO-FLOW: Preprocessing Module: read ...
+Execute         set_default_model read 
+Execute         cdfg_preprocess -model read 
+Execute         rtl_gen_preprocess read 
+WARNING: [SYN 201-103] Legalizing function name 'read' to 'read_r'.
+INFO-FLOW: Preprocessing Module: exec_Pipeline_VITIS_LOOP_23_1 ...
+Execute         set_default_model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         cdfg_preprocess -model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         rtl_gen_preprocess exec_Pipeline_VITIS_LOOP_23_1 
+INFO-FLOW: Preprocessing Module: exec ...
+Execute         set_default_model exec 
+Execute         cdfg_preprocess -model exec 
+Execute         rtl_gen_preprocess exec 
+INFO-FLOW: Preprocessing Module: write_Pipeline_VITIS_LOOP_35_1 ...
+Execute         set_default_model write_Pipeline_VITIS_LOOP_35_1 
+Execute         cdfg_preprocess -model write_Pipeline_VITIS_LOOP_35_1 
+Execute         rtl_gen_preprocess write_Pipeline_VITIS_LOOP_35_1 
+INFO-FLOW: Preprocessing Module: write ...
+Execute         set_default_model write 
+Execute         cdfg_preprocess -model write 
+Execute         rtl_gen_preprocess write 
+WARNING: [SYN 201-103] Legalizing function name 'write' to 'write_r'.
+INFO-FLOW: Preprocessing Module: pass_dataflow ...
+Execute         set_default_model pass_dataflow 
+Execute         cdfg_preprocess -model pass_dataflow 
+Execute         rtl_gen_preprocess pass_dataflow 
+INFO-FLOW: Preprocessing Module: pass ...
+Execute         set_default_model pass 
+Execute         cdfg_preprocess -model pass 
+Execute         rtl_gen_preprocess pass 
+INFO-FLOW: Model list for synthesis: entry_proc read_Pipeline_VITIS_LOOP_13_1 read exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write pass_dataflow pass
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model entry_proc 
+Execute         schedule -model entry_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 573.508 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling entry_proc.
+Execute         set_default_model entry_proc 
+Execute         bind -model entry_proc 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 573.625 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.bind.adb -f 
+INFO-FLOW: Finish binding entry_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model read_Pipeline_VITIS_LOOP_13_1 
+Execute         schedule -model read_Pipeline_VITIS_LOOP_13_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 574.633 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.sched.adb -f 
+INFO-FLOW: Finish scheduling read_Pipeline_VITIS_LOOP_13_1.
+Execute         set_default_model read_Pipeline_VITIS_LOOP_13_1 
+Execute         bind -model read_Pipeline_VITIS_LOOP_13_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 574.633 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.bind.adb -f 
+INFO-FLOW: Finish binding read_Pipeline_VITIS_LOOP_13_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model read 
+Execute         schedule -model read 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 574.793 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.11 sec.
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.sched.adb -f 
+INFO-FLOW: Finish scheduling read.
+Execute         set_default_model read 
+Execute         bind -model read 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 574.793 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.bind.adb -f 
+INFO-FLOW: Finish binding read.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'exec_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         schedule -model exec_Pipeline_VITIS_LOOP_23_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 575.426 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.sched.adb -f 
+INFO-FLOW: Finish scheduling exec_Pipeline_VITIS_LOOP_23_1.
+Execute         set_default_model exec_Pipeline_VITIS_LOOP_23_1 
+Execute         bind -model exec_Pipeline_VITIS_LOOP_23_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 575.426 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.bind.adb -f 
+INFO-FLOW: Finish binding exec_Pipeline_VITIS_LOOP_23_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'exec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model exec 
+Execute         schedule -model exec 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 575.574 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.sched.adb -f 
+INFO-FLOW: Finish scheduling exec.
+Execute         set_default_model exec 
+Execute         bind -model exec 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 575.574 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.bind.adb -f 
+INFO-FLOW: Finish binding exec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_Pipeline_VITIS_LOOP_35_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model write_Pipeline_VITIS_LOOP_35_1 
+Execute         schedule -model write_Pipeline_VITIS_LOOP_35_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_35_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_35_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 575.902 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.sched.adb -f 
+INFO-FLOW: Finish scheduling write_Pipeline_VITIS_LOOP_35_1.
+Execute         set_default_model write_Pipeline_VITIS_LOOP_35_1 
+Execute         bind -model write_Pipeline_VITIS_LOOP_35_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 575.902 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.bind.adb -f 
+INFO-FLOW: Finish binding write_Pipeline_VITIS_LOOP_35_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model write 
+Execute         schedule -model write 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 576.090 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.sched.adb -f 
+INFO-FLOW: Finish scheduling write.
+Execute         set_default_model write 
+Execute         bind -model write 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 576.090 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.bind.adb -f 
+INFO-FLOW: Finish binding write.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pass_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pass_dataflow 
+Execute         schedule -model pass_dataflow 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 576.090 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.sched.adb -f 
+INFO-FLOW: Finish scheduling pass_dataflow.
+Execute         set_default_model pass_dataflow 
+Execute         bind -model pass_dataflow 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 576.090 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.bind.adb -f 
+Command         db_write done; 0.11 sec.
+INFO-FLOW: Finish binding pass_dataflow.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pass' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pass 
+Execute         schedule -model pass 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 576.145 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.sched.adb -f 
+INFO-FLOW: Finish scheduling pass.
+Execute         set_default_model pass 
+Execute         bind -model pass 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 576.285 MB.
+Execute         syn_report -verbosereport -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.bind.adb -f 
+INFO-FLOW: Finish binding pass.
+Execute         get_model_list pass -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess entry_proc 
+Execute         rtl_gen_preprocess read_Pipeline_VITIS_LOOP_13_1 
+Execute         rtl_gen_preprocess read 
+Execute         rtl_gen_preprocess exec_Pipeline_VITIS_LOOP_23_1 
+Execute         rtl_gen_preprocess exec 
+Execute         rtl_gen_preprocess write_Pipeline_VITIS_LOOP_35_1 
+Execute         rtl_gen_preprocess write 
+Execute         rtl_gen_preprocess pass_dataflow 
+Execute         rtl_gen_preprocess pass 
+INFO-FLOW: Model list for RTL generation: entry_proc read_Pipeline_VITIS_LOOP_13_1 read exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write pass_dataflow pass
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model entry_proc -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 576.449 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_entry_proc 
+Execute         gen_rtl entry_proc -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_entry_proc 
+Execute         syn_report -csynth -model entry_proc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/entry_proc_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model entry_proc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/entry_proc_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model entry_proc -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model entry_proc -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.adb 
+Execute         db_write -model entry_proc -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info entry_proc -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model read_Pipeline_VITIS_LOOP_13_1 -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'read_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'read_Pipeline_VITIS_LOOP_13_1/m_axi_p0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_Pipeline_VITIS_LOOP_13_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 577.188 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl read_Pipeline_VITIS_LOOP_13_1 -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_read_Pipeline_VITIS_LOOP_13_1 
+Execute         gen_rtl read_Pipeline_VITIS_LOOP_13_1 -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_read_Pipeline_VITIS_LOOP_13_1 
+Execute         syn_report -csynth -model read_Pipeline_VITIS_LOOP_13_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/read_Pipeline_VITIS_LOOP_13_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model read_Pipeline_VITIS_LOOP_13_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/read_Pipeline_VITIS_LOOP_13_1_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model read_Pipeline_VITIS_LOOP_13_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model read_Pipeline_VITIS_LOOP_13_1 -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.adb 
+Execute         db_write -model read_Pipeline_VITIS_LOOP_13_1 -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info read_Pipeline_VITIS_LOOP_13_1 -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model read -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_r'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 578.805 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl read -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_read_r 
+Execute         gen_rtl read -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_read_r 
+Execute         syn_report -csynth -model read -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/read_r_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model read -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/read_r_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model read -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model read -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.adb 
+Execute         db_write -model read -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info read -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'exec_Pipeline_VITIS_LOOP_23_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model exec_Pipeline_VITIS_LOOP_23_1 -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'exec_Pipeline_VITIS_LOOP_23_1' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'add_512ns_512ns_512_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'exec_Pipeline_VITIS_LOOP_23_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 579.777 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl exec_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_exec_Pipeline_VITIS_LOOP_23_1 
+Execute         gen_rtl exec_Pipeline_VITIS_LOOP_23_1 -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_exec_Pipeline_VITIS_LOOP_23_1 
+Execute         syn_report -csynth -model exec_Pipeline_VITIS_LOOP_23_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/exec_Pipeline_VITIS_LOOP_23_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model exec_Pipeline_VITIS_LOOP_23_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/exec_Pipeline_VITIS_LOOP_23_1_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model exec_Pipeline_VITIS_LOOP_23_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model exec_Pipeline_VITIS_LOOP_23_1 -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.adb 
+Execute         db_write -model exec_Pipeline_VITIS_LOOP_23_1 -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info exec_Pipeline_VITIS_LOOP_23_1 -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'exec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model exec -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'exec'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 580.531 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl exec -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_exec 
+Execute         gen_rtl exec -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_exec 
+Execute         syn_report -csynth -model exec -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/exec_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model exec -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/exec_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model exec -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model exec -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.adb 
+Execute         db_write -model exec -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info exec -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_Pipeline_VITIS_LOOP_35_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model write_Pipeline_VITIS_LOOP_35_1 -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'write_Pipeline_VITIS_LOOP_35_1' pipeline 'VITIS_LOOP_35_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_Pipeline_VITIS_LOOP_35_1/m_axi_p1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_Pipeline_VITIS_LOOP_35_1'.
+Command         create_rtl_model done; 0.37 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 581.312 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl write_Pipeline_VITIS_LOOP_35_1 -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_write_Pipeline_VITIS_LOOP_35_1 
+Execute         gen_rtl write_Pipeline_VITIS_LOOP_35_1 -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_write_Pipeline_VITIS_LOOP_35_1 
+Execute         syn_report -csynth -model write_Pipeline_VITIS_LOOP_35_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/write_Pipeline_VITIS_LOOP_35_1_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model write_Pipeline_VITIS_LOOP_35_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/write_Pipeline_VITIS_LOOP_35_1_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model write_Pipeline_VITIS_LOOP_35_1 -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model write_Pipeline_VITIS_LOOP_35_1 -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.adb 
+Execute         db_write -model write_Pipeline_VITIS_LOOP_35_1 -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info write_Pipeline_VITIS_LOOP_35_1 -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model write -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_r'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 582.941 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl write -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_write_r 
+Execute         gen_rtl write -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_write_r 
+Execute         syn_report -csynth -model write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/write_r_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/write_r_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model write -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model write -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.adb 
+Execute         db_write -model write -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info write -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pass_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pass_dataflow -top_prefix pass_ -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.compgen.tcl 
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pass_dataflow/m_axi_p1_RREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pass_dataflow'.
+Command         create_rtl_model done; 0.48 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.57 seconds; current allocated memory: 584.758 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pass_dataflow -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass_pass_dataflow 
+Execute         gen_rtl pass_dataflow -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass_pass_dataflow 
+Execute         syn_report -csynth -model pass_dataflow -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/pass_dataflow_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model pass_dataflow -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/pass_dataflow_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model pass_dataflow -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model pass_dataflow -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.adb 
+Execute         db_write -model pass_dataflow -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Command         db_write done; 0.12 sec.
+Execute         gen_tb_info pass_dataflow -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pass' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pass -top_prefix  -sub_prefix pass_ -mg_file /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/p0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/p1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/numInputs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pass/processDelay' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pass' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'input_r', 'output_r', 'numInputs', 'processDelay' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pass'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 586.516 MB.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pass -istop -style xilinx -f -lang vhdl -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/vhdl/pass 
+Execute         gen_rtl pass -istop -style xilinx -f -lang vlog -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/verilog/pass 
+Execute         syn_report -csynth -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/pass_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/pass_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -model pass -f -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.adb 
+Execute         db_write -model pass -bindview -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info pass -p /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass 
+Execute         export_constraint_db -f -tool general -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.constraint.tcl 
+Execute         syn_report -designview -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.design.xml 
+Execute         syn_report -csynthDesign -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model pass -o /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks pass 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         sc_get_portdomain pass 
+INFO-FLOW: Model list for RTL component generation: entry_proc read_Pipeline_VITIS_LOOP_13_1 read exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write pass_dataflow pass
+INFO-FLOW: Handling components in module [entry_proc] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [read_Pipeline_VITIS_LOOP_13_1] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.compgen.tcl 
+INFO-FLOW: Found component pass_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [read_r] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.compgen.tcl 
+INFO-FLOW: Handling components in module [exec_Pipeline_VITIS_LOOP_23_1] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+INFO-FLOW: Found component pass_add_512ns_512ns_512_2_1.
+INFO-FLOW: Append model pass_add_512ns_512ns_512_2_1
+INFO-FLOW: Found component pass_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [exec] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.compgen.tcl 
+INFO-FLOW: Handling components in module [write_Pipeline_VITIS_LOOP_35_1] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.compgen.tcl 
+INFO-FLOW: Found component pass_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [write_r] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.compgen.tcl 
+INFO-FLOW: Handling components in module [pass_dataflow] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.compgen.tcl 
+INFO-FLOW: Found component pass_fifo_w64_d4_S.
+INFO-FLOW: Append model pass_fifo_w64_d4_S
+INFO-FLOW: Found component pass_fifo_w32_d3_S.
+INFO-FLOW: Append model pass_fifo_w32_d3_S
+INFO-FLOW: Found component pass_fifo_w512_d2_S.
+INFO-FLOW: Append model pass_fifo_w512_d2_S
+INFO-FLOW: Found component pass_fifo_w32_d2_S.
+INFO-FLOW: Append model pass_fifo_w32_d2_S
+INFO-FLOW: Found component pass_fifo_w512_d2_S.
+INFO-FLOW: Append model pass_fifo_w512_d2_S
+INFO-FLOW: Found component pass_fifo_w32_d2_S.
+INFO-FLOW: Append model pass_fifo_w32_d2_S
+INFO-FLOW: Found component pass_start_for_exec_U0.
+INFO-FLOW: Append model pass_start_for_exec_U0
+INFO-FLOW: Found component pass_start_for_write_U0.
+INFO-FLOW: Append model pass_start_for_write_U0
+INFO-FLOW: Handling components in module [pass] ... 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.tcl 
+INFO-FLOW: Found component pass_p0_m_axi.
+INFO-FLOW: Append model pass_p0_m_axi
+INFO-FLOW: Found component pass_p1_m_axi.
+INFO-FLOW: Append model pass_p1_m_axi
+INFO-FLOW: Found component pass_control_s_axi.
+INFO-FLOW: Append model pass_control_s_axi
+INFO-FLOW: Append model entry_proc
+INFO-FLOW: Append model read_Pipeline_VITIS_LOOP_13_1
+INFO-FLOW: Append model read_r
+INFO-FLOW: Append model exec_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: Append model exec
+INFO-FLOW: Append model write_Pipeline_VITIS_LOOP_35_1
+INFO-FLOW: Append model write_r
+INFO-FLOW: Append model pass_dataflow
+INFO-FLOW: Append model pass
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: pass_flow_control_loop_pipe_sequential_init pass_add_512ns_512ns_512_2_1 pass_flow_control_loop_pipe_sequential_init pass_flow_control_loop_pipe_sequential_init pass_fifo_w64_d4_S pass_fifo_w32_d3_S pass_fifo_w512_d2_S pass_fifo_w32_d2_S pass_fifo_w512_d2_S pass_fifo_w32_d2_S pass_start_for_exec_U0 pass_start_for_write_U0 pass_p0_m_axi pass_p1_m_axi pass_control_s_axi entry_proc read_Pipeline_VITIS_LOOP_13_1 read_r exec_Pipeline_VITIS_LOOP_23_1 exec write_Pipeline_VITIS_LOOP_35_1 write_r pass_dataflow pass
+INFO-FLOW: Generating /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model pass_add_512ns_512ns_512_2_1
+INFO-FLOW: To file: write model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model pass_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model pass_fifo_w64_d4_S
+INFO-FLOW: To file: write model pass_fifo_w32_d3_S
+INFO-FLOW: To file: write model pass_fifo_w512_d2_S
+INFO-FLOW: To file: write model pass_fifo_w32_d2_S
+INFO-FLOW: To file: write model pass_fifo_w512_d2_S
+INFO-FLOW: To file: write model pass_fifo_w32_d2_S
+INFO-FLOW: To file: write model pass_start_for_exec_U0
+INFO-FLOW: To file: write model pass_start_for_write_U0
+INFO-FLOW: To file: write model pass_p0_m_axi
+INFO-FLOW: To file: write model pass_p1_m_axi
+INFO-FLOW: To file: write model pass_control_s_axi
+INFO-FLOW: To file: write model entry_proc
+INFO-FLOW: To file: write model read_Pipeline_VITIS_LOOP_13_1
+INFO-FLOW: To file: write model read_r
+INFO-FLOW: To file: write model exec_Pipeline_VITIS_LOOP_23_1
+INFO-FLOW: To file: write model exec
+INFO-FLOW: To file: write model write_Pipeline_VITIS_LOOP_35_1
+INFO-FLOW: To file: write model write_r
+INFO-FLOW: To file: write model pass_dataflow
+INFO-FLOW: To file: write model pass
+INFO-FLOW: Generating /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute         get_top 
+Execute         get_config_export -ipname 
+INFO-FLOW: DBG:PUTS: read_platform_lib /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=3.333 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/vhdl' dstVlogDir='/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/vlog' tclDir='/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db' modelList='pass_flow_control_loop_pipe_sequential_init
+pass_add_512ns_512ns_512_2_1
+pass_flow_control_loop_pipe_sequential_init
+pass_flow_control_loop_pipe_sequential_init
+pass_fifo_w64_d4_S
+pass_fifo_w32_d3_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_start_for_exec_U0
+pass_start_for_write_U0
+pass_p0_m_axi
+pass_p1_m_axi
+pass_control_s_axi
+entry_proc
+read_Pipeline_VITIS_LOOP_13_1
+read_r
+exec_Pipeline_VITIS_LOOP_23_1
+exec
+write_Pipeline_VITIS_LOOP_35_1
+write_r
+pass_dataflow
+pass
+' expOnly='0'
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.compgen.tcl 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'pass_add_512ns_512ns_512_2_1_Adder_0'
+Command         ap_source done; 0.23 sec.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.compgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.compgen.tcl 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'output_c_U(pass_fifo_w64_d4_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'processDelay_c_U(pass_fifo_w32_d3_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'inStream_U(pass_fifo_w512_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'numInputs_c9_U(pass_fifo_w32_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'outStream_U(pass_fifo_w512_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'numInputs_c_U(pass_fifo_w32_d2_S)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_exec_U0_U(pass_start_for_exec_U0)' using Shift Registers.
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_write_U0_U(pass_start_for_write_U0)' using Shift Registers.
+Command         ap_source done; 0.24 sec.
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.tcl 
+Execute           source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.36 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.04 seconds; current allocated memory: 590.883 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='pass_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name entry_proc
+INFO-FLOW: No bind nodes found for module_name read_r
+INFO-FLOW: No bind nodes found for module_name write_r
+INFO-FLOW: No bind nodes found for module_name pass
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute         get_config_op mul -impl 
+Execute         get_config_op mul -latency 
+Execute         get_config_op mul -precision 
+Execute         get_config_op add -impl 
+Execute         get_config_op add -latency 
+Execute         get_config_op add -precision 
+Execute         get_config_op sub -impl 
+Execute         get_config_op sub -latency 
+Execute         get_config_op sub -precision 
+Execute         get_config_op fadd -impl 
+Execute         get_config_op fadd -latency 
+Execute         get_config_op fadd -precision 
+Execute         get_config_op fsub -impl 
+Execute         get_config_op fsub -latency 
+Execute         get_config_op fsub -precision 
+Execute         get_config_op fdiv -impl 
+Execute         get_config_op fdiv -latency 
+Execute         get_config_op fdiv -precision 
+Execute         get_config_op fexp -impl 
+Execute         get_config_op fexp -latency 
+Execute         get_config_op fexp -precision 
+Execute         get_config_op flog -impl 
+Execute         get_config_op flog -latency 
+Execute         get_config_op flog -precision 
+Execute         get_config_op fmul -impl 
+Execute         get_config_op fmul -latency 
+Execute         get_config_op fmul -precision 
+Execute         get_config_op frsqrt -impl 
+Execute         get_config_op frsqrt -latency 
+Execute         get_config_op frsqrt -precision 
+Execute         get_config_op frecip -impl 
+Execute         get_config_op frecip -latency 
+Execute         get_config_op frecip -precision 
+Execute         get_config_op fsqrt -impl 
+Execute         get_config_op fsqrt -latency 
+Execute         get_config_op fsqrt -precision 
+Execute         get_config_op dadd -impl 
+Execute         get_config_op dadd -latency 
+Execute         get_config_op dadd -precision 
+Execute         get_config_op dsub -impl 
+Execute         get_config_op dsub -latency 
+Execute         get_config_op dsub -precision 
+Execute         get_config_op ddiv -impl 
+Execute         get_config_op ddiv -latency 
+Execute         get_config_op ddiv -precision 
+Execute         get_config_op dexp -impl 
+Execute         get_config_op dexp -latency 
+Execute         get_config_op dexp -precision 
+Execute         get_config_op dlog -impl 
+Execute         get_config_op dlog -latency 
+Execute         get_config_op dlog -precision 
+Execute         get_config_op dmul -impl 
+Execute         get_config_op dmul -latency 
+Execute         get_config_op dmul -precision 
+Execute         get_config_op drsqrt -impl 
+Execute         get_config_op drsqrt -latency 
+Execute         get_config_op drsqrt -precision 
+Execute         get_config_op drecip -impl 
+Execute         get_config_op drecip -latency 
+Execute         get_config_op drecip -precision 
+Execute         get_config_op dsqrt -impl 
+Execute         get_config_op dsqrt -latency 
+Execute         get_config_op dsqrt -precision 
+Execute         get_config_op hadd -impl 
+Execute         get_config_op hadd -latency 
+Execute         get_config_op hadd -precision 
+Execute         get_config_op hsub -impl 
+Execute         get_config_op hsub -latency 
+Execute         get_config_op hsub -precision 
+Execute         get_config_op hdiv -impl 
+Execute         get_config_op hdiv -latency 
+Execute         get_config_op hdiv -precision 
+Execute         get_config_op hmul -impl 
+Execute         get_config_op hmul -latency 
+Execute         get_config_op hmul -precision 
+Execute         get_config_op hsqrt -impl 
+Execute         get_config_op hsqrt -latency 
+Execute         get_config_op hsqrt -precision 
+Execute         get_config_op facc -impl 
+Execute         get_config_op facc -latency 
+Execute         get_config_op facc -precision 
+Execute         get_config_op fmacc -impl 
+Execute         get_config_op fmacc -latency 
+Execute         get_config_op fmacc -precision 
+Execute         get_config_op fmadd -impl 
+Execute         get_config_op fmadd -latency 
+Execute         get_config_op fmadd -precision 
+Execute         get_config_storage fifo -auto_srl_max_bits 
+Execute         get_config_storage fifo -auto_srl_max_depth 
+Execute         get_config_storage fifo -impl 
+Execute         get_solution -flow_target 
+Execute         get_config_array_partition -complete_threshold 
+Execute         get_config_array_partition -throughput_driven 
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -ignore_long_run_time 
+Execute         get_config_compile -name_max_length 
+Execute         get_config_compile -no_signed_zeros 
+Execute         get_config_compile -pipeline_loops 
+Execute         get_config_compile -pipeline_style 
+Execute         get_config_compile -pragma_strict_mode 
+Execute         get_config_compile -pre_tcl 
+Execute         get_config_compile -unsafe_math_optimizations 
+Execute         get_config_dataflow -default_channel 
+Execute         get_config_dataflow -disable_fifo_sizing_opt 
+Execute         get_config_dataflow -fifo_depth 
+Execute         get_config_dataflow -override_user_fifo_depth 
+Execute         get_config_dataflow -scalar_fifo_depth 
+Execute         get_config_dataflow -start_fifo_depth 
+Execute         get_config_dataflow -strict_mode 
+Execute         get_config_dataflow -strict_stable_sync 
+Execute         get_config_dataflow -task_level_fifo_depth 
+Execute         get_config_debug -directory 
+Execute         get_config_debug -enable 
+Execute         get_config_export -description 
+Execute         get_config_export -display_name 
+Execute         get_config_export -format 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_export -ipname 
+Execute         get_config_export -library 
+Execute         get_config_export -output 
+Execute         get_config_export -rtl 
+Execute         get_config_export -taxonomy 
+Execute         get_config_export -vendor 
+Execute         get_config_export -version 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_max_timing_paths 
+Execute         get_config_export -vivado_optimization_level 
+Execute         get_config_export -vivado_pblock 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_export -vivado_report_level 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_interface -clock_enable 
+Execute         get_config_interface -default_slave_interface 
+Execute         get_config_interface -m_axi_addr64 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_buffer_impl 
+Execute         get_config_interface -m_axi_conservative_mode 
+Execute         get_config_interface -m_axi_flush_mode 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -register_io 
+Execute         get_config_interface -s_axilite_auto_restart_counter 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_interface -s_axilite_interrupt_mode 
+Execute         get_config_interface -s_axilite_mailbox 
+Execute         get_config_interface -s_axilite_status_regs 
+Execute         get_config_interface -s_axilite_sw_reset 
+Execute         get_config_rtl -deadlock_detection 
+Execute         get_config_rtl -header 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -mult_keep_attribute 
+Execute         get_config_rtl -register_all_io 
+Execute         get_config_rtl -register_reset_num 
+Execute         get_config_rtl -reset 
+Execute         get_config_rtl -reset_async 
+Execute         get_config_rtl -reset_level 
+Execute         get_config_schedule -enable_dsp_full_reg 
+Execute         get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='pass_flow_control_loop_pipe_sequential_init
+pass_add_512ns_512ns_512_2_1
+pass_flow_control_loop_pipe_sequential_init
+pass_flow_control_loop_pipe_sequential_init
+pass_fifo_w64_d4_S
+pass_fifo_w32_d3_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_start_for_exec_U0
+pass_start_for_write_U0
+pass_p0_m_axi
+pass_p1_m_axi
+pass_control_s_axi
+entry_proc
+read_Pipeline_VITIS_LOOP_13_1
+read_r
+exec_Pipeline_VITIS_LOOP_23_1
+exec
+write_Pipeline_VITIS_LOOP_35_1
+write_r
+pass_dataflow
+pass
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         get_solution -flow_target 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/top-io-be.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute         get_config_interface -s_axilite_interrupt_mode 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute         get_config_export -format 
+Execute         get_config_export -output 
+Execute         get_config_export -vendor 
+Execute         get_config_export -library 
+Execute         get_config_export -version 
+Execute         get_config_export -ipname 
+Execute         get_config_export -taxonomy 
+Execute         get_config_export -description 
+Execute         get_config_export -display_name 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.constraint.tcl 
+Execute         sc_get_clocks pass 
+Execute         source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -ip_xdc_file 
+Execute         get_config_export -ip_xdc_ooc_file 
+Execute         get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE pass LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME p0_m_axi_U SOURCE {} VARIABLE {} MODULE pass LOOP {} BUNDLEDNAME p0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME p1_m_axi_U SOURCE {} VARIABLE {} MODULE pass LOOP {} BUNDLEDNAME p1 DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST pass MODULE2INSTS {pass pass pass_dataflow grp_pass_dataflow_fu_88 read_r read_U0 read_Pipeline_VITIS_LOOP_13_1 grp_read_Pipeline_VITIS_LOOP_13_1_fu_82 entry_proc entry_proc_U0 exec exec_U0 exec_Pipeline_VITIS_LOOP_23_1 grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60 write_r write_U0 write_Pipeline_VITIS_LOOP_35_1 grp_write_Pipeline_VITIS_LOOP_35_1_fu_73} INST2MODULE {pass pass grp_pass_dataflow_fu_88 pass_dataflow read_U0 read_r grp_read_Pipeline_VITIS_LOOP_13_1_fu_82 read_Pipeline_VITIS_LOOP_13_1 entry_proc_U0 entry_proc exec_U0 exec grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60 exec_Pipeline_VITIS_LOOP_23_1 write_U0 write_r grp_write_Pipeline_VITIS_LOOP_35_1_fu_73 write_Pipeline_VITIS_LOOP_35_1} INSTDATA {pass {DEPTH 1 CHILDREN grp_pass_dataflow_fu_88} grp_pass_dataflow_fu_88 {DEPTH 2 CHILDREN {read_U0 entry_proc_U0 exec_U0 write_U0}} read_U0 {DEPTH 3 CHILDREN grp_read_Pipeline_VITIS_LOOP_13_1_fu_82} grp_read_Pipeline_VITIS_LOOP_13_1_fu_82 {DEPTH 4 CHILDREN {}} entry_proc_U0 {DEPTH 3 CHILDREN {}} exec_U0 {DEPTH 3 CHILDREN grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60} grp_exec_Pipeline_VITIS_LOOP_23_1_fu_60 {DEPTH 4 CHILDREN {}} write_U0 {DEPTH 3 CHILDREN grp_write_Pipeline_VITIS_LOOP_35_1_fu_73} grp_write_Pipeline_VITIS_LOOP_35_1_fu_73 {DEPTH 4 CHILDREN {}}} MODULEDATA {read_Pipeline_VITIS_LOOP_13_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln13_fu_90_p2 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:13 VARIABLE add_ln13 LOOP VITIS_LOOP_13_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} exec_Pipeline_VITIS_LOOP_23_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME num_2_fu_93_p2 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:23 VARIABLE num_2 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 1 OPTYPE add PRAGMA {} RTLNAME add_512ns_512ns_512_2_1_U14 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:25 VARIABLE add_ln25 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} exec {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln23_fu_77_p2 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:23 VARIABLE add_ln23 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln25_fu_86_p2 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:25 VARIABLE add_ln25 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} write_Pipeline_VITIS_LOOP_35_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_94_p2 SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_35_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} pass_dataflow {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME processDelay_c_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46 VARIABLE processDelay_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME numInputs_c9_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46 VARIABLE numInputs_c9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME numInputs_c_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46 VARIABLE numInputs_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME output_c_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:46 VARIABLE output_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME inStream_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:51 VARIABLE inStream LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME outStream_U SOURCE /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:52 VARIABLE outStream LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 0 BRAM 0 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} read_r {AREA {DSP 0 BRAM 0 URAM 0}} write_r {AREA {DSP 0 BRAM 0 URAM 0}} pass {AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 597.215 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for pass.
+INFO: [VLOG 209-307] Generating Verilog RTL for pass.
+Execute         syn_report -model pass -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+Command       autosyn done; 5.2 sec.
+Command     csynth_design done; 10.92 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.78 seconds. CPU system time: 0.65 seconds. Elapsed time: 10.92 seconds; current allocated memory: -895.797 MB.
+Execute     export_design 
+INFO: [HLS 200-1510] Running: export_design 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format xo -rtl verilog -ipname pass
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_solution -flow_target 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=pass xml_exists=0
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       get_config_rtl -deadlock_detection 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to pass
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_solution -flow_target 
+INFO-FLOW: DBG:PUTS:       kernel.xml check internal_kernel_xml(1)=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/kernel.internal.xml top=pass
+INFO-FLOW: DBG:PUTS:       kernel.xml check proj_kernel_xml    (1)=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml
+INFO-FLOW: DBG:PUTS:       copy internal kernel.xml to project: /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml
+INFO-FLOW: DBG:PUTS:       update_final_kernel_xml /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml
+Execute       get_config_debug -enable 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_export -deadlock_detection 
+INFO-FLOW: DBG:PUTS: Updating /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/../../../kernel.xml with values: interrupt true debug false compileOptions {-I /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src} name pass vlnv xilinx.com:hls:pass:1.0 swReset false mailbox none countedAutoRestart 0 deadlockDetection local
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=6
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=true #modelList=24 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='true' modelList='pass_flow_control_loop_pipe_sequential_init
+pass_add_512ns_512ns_512_2_1
+pass_flow_control_loop_pipe_sequential_init
+pass_flow_control_loop_pipe_sequential_init
+pass_fifo_w64_d4_S
+pass_fifo_w32_d3_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_fifo_w512_d2_S
+pass_fifo_w32_d2_S
+pass_start_for_exec_U0
+pass_start_for_write_U0
+pass_p0_m_axi
+pass_p1_m_axi
+pass_control_s_axi
+entry_proc
+read_Pipeline_VITIS_LOOP_13_1
+read_r
+exec_Pipeline_VITIS_LOOP_23_1
+exec
+write_Pipeline_VITIS_LOOP_35_1
+write_r
+pass_dataflow
+pass
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/top-io-be.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -output 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/entry_proc.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_Pipeline_VITIS_LOOP_13_1.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/read_r.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec_Pipeline_VITIS_LOOP_23_1.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/exec.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_Pipeline_VITIS_LOOP_35_1.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/write_r.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass_dataflow.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.constraint.tcl 
+Execute       sc_get_clocks pass 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       get_config_rtl -deadlock_detection 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -module_prefix 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to pass
+Execute       get_config_rtl -deadlock_detection 
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/driver
+Execute       get_config_export -format 
+Execute       get_config_export -output 
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=true is_sdsoc=true xo_file=/mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/impl/export.xo
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.compgen.dataonly.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=pass
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.rtl_wrap.cfg.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ip_xdc_file 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.constraint.tcl 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/pass.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/_x/pass.hw/pass/pass/solution/impl/ip/pack.sh
+Execute       get_config_export -output 
+Execute       send_msg_by_id INFO @200-802@%s pass/solution/impl/export.xo 
+INFO: [HLS 200-802] Generated output file pass/solution/impl/export.xo
+Command     export_design done; 10.87 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 8.26 seconds. CPU system time: 0.6 seconds. Elapsed time: 10.87 seconds; current allocated memory: 7.863 MB.
+Execute     close_project 
+INFO: [HLS 200-1510] Running: close_project 
+Execute       close_solution 
+Execute         cleanup_all 
+Execute         cleanup_all 

@@ -1,0 +1,192 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pass'
+================================================================
++ General Information: 
+    * Date:           Fri Nov  8 21:38:43 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        pass
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu50-fsvh2104-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+    |               Modules               |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |             |            |     |
+    |               & Loops               |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|      FF     |     LUT    | URAM|
+    +-------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+    |+ pass                               |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|  14909 (~0%)|  19939 (2%)|    -|
+    | + pass_dataflow*                    |  Timing|  -0.00|        -|       -|         -|        -|     -|  dataflow|     -|   -|   5385 (~0%)|  3433 (~0%)|    -|
+    |  + read_r                           |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|    684 (~0%)|   651 (~0%)|    -|
+    |   + read_Pipeline_VITIS_LOOP_13_1   |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|    550 (~0%)|   119 (~0%)|    -|
+    |    o VITIS_LOOP_13_1                |       -|   2.43|        -|       -|         3|        1|     -|       yes|     -|   -|            -|           -|    -|
+    |  + entry_proc                       |       -|   1.21|        0|   0.000|         -|        0|     -|        no|     -|   -|      3 (~0%)|    38 (~0%)|    -|
+    |  + exec                             |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|   1779 (~0%)|   850 (~0%)|    -|
+    |   + exec_Pipeline_VITIS_LOOP_23_1   |       -|   0.05|        -|       -|         -|        -|     -|        no|     -|   -|   1676 (~0%)|   675 (~0%)|    -|
+    |    o VITIS_LOOP_23_1                |       -|   2.43|        -|       -|         4|        1|     -|       yes|     -|   -|            -|           -|    -|
+    |  + write_r                          |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|    715 (~0%)|   676 (~0%)|    -|
+    |   + write_Pipeline_VITIS_LOOP_35_1  |  Timing|  -0.00|        -|       -|         -|        -|     -|        no|     -|   -|    550 (~0%)|   121 (~0%)|    -|
+    |    o VITIS_LOOP_35_1                |       -|   2.43|        -|       -|         3|        1|     -|       yes|     -|   -|            -|           -|    -|
+    +-------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-----------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|           | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-----------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_p0  | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_p1  | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-----------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+--------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register     | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+--------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | input_r_1    | 0x10   | 32    | W      | Data signal of input_r           |                                                                                    |
+| s_axi_control | input_r_2    | 0x14   | 32    | W      | Data signal of input_r           |                                                                                    |
+| s_axi_control | output_r_1   | 0x1c   | 32    | W      | Data signal of output_r          |                                                                                    |
+| s_axi_control | output_r_2   | 0x20   | 32    | W      | Data signal of output_r          |                                                                                    |
+| s_axi_control | numInputs    | 0x28   | 32    | W      | Data signal of numInputs         |                                                                                    |
+| s_axi_control | processDelay | 0x30   | 32    | W      | Data signal of processDelay      |                                                                                    |
++---------------+--------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+---------------------+
+| Argument     | Direction | Datatype            |
++--------------+-----------+---------------------+
+| input        | in        | ap_int<512> const * |
+| output       | out       | ap_int<512>*        |
+| numInputs    | in        | unsigned int        |
+| processDelay | in        | unsigned int        |
++--------------+-----------+---------------------+
+
+* SW-to-HW Mapping
++--------------+---------------+-----------+----------+----------------------------------------+
+| Argument     | HW Interface  | HW Type   | HW Usage | HW Info                                |
++--------------+---------------+-----------+----------+----------------------------------------+
+| input        | m_axi_p0      | interface |          |                                        |
+| input        | s_axi_control | interface | offset   |                                        |
+| output       | m_axi_p1      | interface |          |                                        |
+| output       | s_axi_control | interface | offset   |                                        |
+| numInputs    | s_axi_control | register  |          | name=numInputs offset=0x28 range=32    |
+| processDelay | s_axi_control | register  |          | name=processDelay offset=0x30 range=32 |
++--------------+---------------+-----------+----------+----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Loop            | Direction | Length   | Width | Location                                                                                                                                      |
++--------------+-----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+| m_axi_p0     | VITIS_LOOP_13_1 | read      | variable | 512   | /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:13:20 |
+| m_axi_p1     | VITIS_LOOP_35_1 | write     | variable | 512   | /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:35:20 |
++--------------+-----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------------+----------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Loop            | Problem                                                                                                  | Resolution | Location                                                                                                                                      |
++--------------+----------+-----------------+----------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+| m_axi_p0     | input    | VITIS_LOOP_13_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:13:20 |
+| m_axi_p1     | output   | VITIS_LOOP_35_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /mnt/HLSNAS/02.IZunsR/course-lab_A/Vitis-Tutorials/Hardware_Acceleration/Design_Tutorials/07-host-code-opt/reference-files/src/pass.cpp:35:20 |
++--------------+----------+-----------------+----------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                | DSP | Pragma | Variable | Op  | Impl   | Latency |
++-------------------------------------+-----+--------+----------+-----+--------+---------+
+| + pass                              | 0   |        |          |     |        |         |
+|  + pass_dataflow                    | 0   |        |          |     |        |         |
+|   + read_r                          | 0   |        |          |     |        |         |
+|    + read_Pipeline_VITIS_LOOP_13_1  | 0   |        |          |     |        |         |
+|      add_ln13_fu_90_p2              | -   |        | add_ln13 | add | fabric | 0       |
+|   + exec                            | 0   |        |          |     |        |         |
+|     add_ln23_fu_77_p2               | -   |        | add_ln23 | add | fabric | 0       |
+|     add_ln25_fu_86_p2               | -   |        | add_ln25 | add | fabric | 0       |
+|    + exec_Pipeline_VITIS_LOOP_23_1  | 0   |        |          |     |        |         |
+|      num_2_fu_93_p2                 | -   |        | num_2    | add | fabric | 0       |
+|      add_512ns_512ns_512_2_1_U14    | -   |        | add_ln25 | add | fabric | 1       |
+|   + write_r                         | 0   |        |          |     |        |         |
+|    + write_Pipeline_VITIS_LOOP_35_1 | 0   |        |          |     |        |         |
+|      add_ln35_fu_94_p2              | -   |        | add_ln35 | add | fabric | 0       |
++-------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------+------+------+--------+----------------+---------+------+---------+
+| Name                | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
++---------------------+------+------+--------+----------------+---------+------+---------+
+| + pass              | 0    | 0    |        |                |         |      |         |
+|  + pass_dataflow    | 0    | 0    |        |                |         |      |         |
+|    processDelay_c_U | -    | -    |        | processDelay_c | fifo    | srl  | 0       |
+|    numInputs_c9_U   | -    | -    |        | numInputs_c9   | fifo    | srl  | 0       |
+|    numInputs_c_U    | -    | -    |        | numInputs_c    | fifo    | srl  | 0       |
+|    output_c_U       | -    | -    |        | output_c       | fifo    | srl  | 0       |
+|    inStream_U       | -    | -    |        | inStream       | fifo    | srl  | 0       |
+|    outStream_U      | -    | -    |        | outStream      | fifo    | srl  | 0       |
++---------------------+------+------+--------+----------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                                  | Messages                                                                                                                                                                           |
++----------+---------+-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | ../../../src/pass.cpp:46 in pass_dataflow | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+-------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+------------------------------------------+------------------------------------------+
+| Type      | Options                                  | Location                                 |
++-----------+------------------------------------------+------------------------------------------+
+| pipeline  |                                          | ../../../src/pass.cpp:14 in read         |
+| pipeline  |                                          | ../../../src/pass.cpp:36 in write        |
+| interface | m_axi port=input offset=slave bundle=p0  | ../../../src/pass.cpp:65 in pass, input  |
+| interface | m_axi port=output offset=slave bundle=p1 | ../../../src/pass.cpp:66 in pass, output |
++-----------+------------------------------------------+------------------------------------------+
+
+

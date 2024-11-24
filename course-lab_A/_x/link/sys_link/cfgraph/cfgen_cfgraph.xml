@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="x86" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_pass">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="input" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="output" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="numInputs" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="processDelay" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_pass">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="input" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="output" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="numInputs" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="processDelay" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:comp cf:name="xilinx_u50_xdma_201920_3" xd:componentRef="xilinx_u50_xdma_201920_3" xd:clockId="0"/>
+  <cf:comp cf:name="pass_1" xd:componentRef="pass" xd:clockId="0">
+    <xd:portConfig xd:intfName="m_axi_p0" xd:intfType="intf_pins"/>
+    <xd:portConfig xd:intfName="m_axi_p1" xd:intfType="intf_pins"/>
+  </cf:comp>
+  <cf:instance cf:name="hwinst_pass_1" cf:blockName="hwblk_pass" cf:compName="pass_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="input" cf:compPort="m_axi_p0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="output" cf:compPort="m_axi_p1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+    <cf:portMap cf:blockPort="numInputs" cf:compPort="s_axi_control" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="processDelay" cf:compPort="s_axi_control" xd:register="0x30"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_pass_1" cf:blockName="swblk_pass" cf:compName="xilinx_u50_xdma_201920_3">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="SLR0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="input" cf:compPort="hmss_0" cf:ctrlPort="SLR0/interconnect_axilite_user_M01_AXI" cf:sptag="HBM[0]"/>
+    <cf:portMap cf:blockPort="output" cf:compPort="hmss_0" cf:ctrlPort="SLR0/interconnect_axilite_user_M01_AXI" cf:sptag="HBM[1]"/>
+    <cf:portMap cf:blockPort="numInputs" cf:compPort="SLR0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="processDelay" cf:compPort="SLR0/interconnect_axilite_user_M01_AXI"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_pass_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_pass_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u50_xdma_201920_3" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_pass_1" cf:srcPort="input" cf:dstInst="hwinst_pass_1" cf:dstPort="input">
+    <cf:dataMover cf:compName="pass_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_pass_1" cf:srcPort="output" cf:dstInst="hwinst_pass_1" cf:dstPort="output">
+    <cf:dataMover cf:compName="pass_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_pass_1" cf:srcPort="numInputs" cf:dstInst="hwinst_pass_1" cf:dstPort="numInputs">
+    <cf:dataMover cf:compName="xilinx_u50_xdma_201920_3" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_pass_1" cf:srcPort="processDelay" cf:dstInst="hwinst_pass_1" cf:dstPort="processDelay">
+    <cf:dataMover cf:compName="xilinx_u50_xdma_201920_3" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+</cf:model>

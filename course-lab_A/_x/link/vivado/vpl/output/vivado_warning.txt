@@ -1,0 +1,42 @@
+IP ulp_hmss_0_0 is locked. Locked reason: * Newer version is available in the IP Catalog.
+ * IP 'ulp_hmss_0_0' contains one or more locked subcores.* Either run upgrade on the IP or repackage the component using a newer version of the child IP that is currently locked.
+.
+IP bd_85ad_axi_apb_bridge_inst_0 is locked. Locked reason: * IP definition 'AXI APB Bridge (3.0)' for IP 'bd_85ad_axi_apb_bridge_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_85ad_hbm_inst_0 is locked. Locked reason: * IP definition 'HBM IP (1.0)' for IP 'bd_85ad_hbm_inst_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_85ad_init_concat_0 is locked. Locked reason: * IP definition 'Concat (2.1)' for IP 'bd_85ad_init_concat_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_85ad_interconnect0_12_0 is locked. Locked reason: * IP definition 'AXI SmartConnect (1.0)' for IP 'bd_85ad_interconnect0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+ * IP 'bd_85ad_interconnect0_12_0' contains one or more locked subcores.* Please repackage the parent IP 'bd_85ad'.
+.
+IP bd_85ad_slice0_12_0 is locked. Locked reason: * IP definition 'AXI Register Slice (2.1)' for IP 'bd_85ad_slice0_12_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_85ad_util_vector_logic_0 is locked. Locked reason: * IP definition 'Utility Vector Logic (2.0)' for IP 'bd_85ad_util_vector_logic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_85ad_vip_S00_0 is locked. Locked reason: * IP definition 'AXI Verification IP (1.1)' for IP 'bd_85ad_vip_S00_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_m00e_0 is locked. Locked reason: * IP definition 'SC EXIT (1.0)' for IP 'bd_af07_m00e_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_m00s2a_0 is locked. Locked reason: * IP definition 'SmartConnect SC2AXI Bridge (1.0)' for IP 'bd_af07_m00s2a_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_one_0 is locked. Locked reason: * IP definition 'Constant (1.1)' for IP 'bd_af07_one_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_s00a2s_0 is locked. Locked reason: * IP definition 'SmartConnect AXI2SC Bridge (1.0)' for IP 'bd_af07_s00a2s_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_s00mmu_0 is locked. Locked reason: * IP definition 'SC MMU (1.0)' for IP 'bd_af07_s00mmu_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_s00sic_0 is locked. Locked reason: * IP definition 'SC SI_CONVERTER (1.0)' for IP 'bd_af07_s00sic_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_s00tr_0 is locked. Locked reason: * IP definition 'SC TRANSACTION_REGULATOR (1.0)' for IP 'bd_af07_s00tr_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_sarn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sarn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_sawn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sawn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_sbn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_sbn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_srn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_srn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
+IP bd_af07_swn_0 is locked. Locked reason: * IP definition 'SmartConnect Node (1.0)' for IP 'bd_af07_swn_0' (customized with software release 2019.2) has a different revision in the IP Catalog.
+.
