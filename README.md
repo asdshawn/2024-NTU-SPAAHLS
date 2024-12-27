@@ -1,6 +1,15 @@
 # 2024-NTU-SPAAHLS
 This is my work in "Special Project on Application Acceleration with High-Level-Synthesis" course.
 
+## Contents
+
+1. [Installization](#Installization)
+2. [Vivado Flow (Lab1&2)](#Vivado-Flow-Lab1-amp-Lab2)
+3. [Vitis Flow (Lab3)](#Vitis-Flow-Lab3)
+4. [Host Code Optimization (LabA)](#Host-Code-Optimization-LabA)
+5. [Discrete Fourier Transform Implementation (LabB)](#Discrete-Fourier-Transform-Implementation-LabB)
+6. [Softmax Function Implementation (Final Project)](#Softmax-Function-Implementation-Final-Project)
+
 ## Installization
 :::warning
 Note that this method will cause the GUI to display incorrectly, I'm still trying to figure out how to solve it.
@@ -88,7 +97,7 @@ In this lab, you operate on a simple, single, generic C++ kernel implementation.
 * **bufferSize:** This parameter is used to declare the number of 512-bit values to be transferred per kernel invocation.
 * **softwarePipelineInterval:** This parameter is used to determine how many operations can be pre-scheduled before synchronization occurs.
 
-## Project: Discrete Fourier Transform (DFT)
+## Discrete Fourier Transform Implementation (LabB)
 The goal of this project is to design architectures that implement the Discrete Fourier Transform (DFT). DFT is a common operation in signal processing which generates a discrete frequency domain representation of the discrete input signal. The input signal is a vector of samples and the matrix is a set of basis functions corresponding to discrete cosine and sine waveforms of different frequencies. The multiplication of the input signal with these basis functions describes how well the input signal correlates with those waveforms, which is the value of the Fourier series at that frequency.
 
 
@@ -461,3 +470,5 @@ Use Unroll to cut latency in half.
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 599065          | 40   | 42  | 4522 | 6574 |
+
+## Softmax Function Implementation (Final Project)
