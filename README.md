@@ -1,5 +1,5 @@
 # 2024-NTU-SPAAHLS
-This is my work in "Special Project on Application Acceleration with High-Level-Synthesis" course.
+This is my work in "Special Project on Application Acceleration with High-Level-Synthesis" course, and Study Journal is at: https://hackmd.io/@asdshawn/SPAAHLS
 
 ## Contents
 
