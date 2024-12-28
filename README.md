@@ -152,7 +152,7 @@ INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 2
 ```
 
 * C Synthesis Result:
-> [!WARNING]II Violation & Not Perfect Loop.
+> [!WARNING] II Violation & Not Perfect Loop.
 
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
@@ -203,9 +203,8 @@ INFO: [SCHED 204-11] Finished scheduling.
 ```
 
 C Synthesis Result:
-:::warning
-II Violation & Not Perfect Loop & Timing Violation.
-:::
+> [!WARNING] II Violation & Not Perfect Loop & Timing Violation.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 8.844ns | 4217857         | 4    | 5   | 1168 | 1227 |
