@@ -152,7 +152,8 @@ INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 2
 ```
 
 * C Synthesis Result:
-> [!WARNING] II Violation & Not Perfect Loop.
+> [!WARNING]
+> II Violation & Not Perfect Loop.
 
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
@@ -203,7 +204,8 @@ INFO: [SCHED 204-11] Finished scheduling.
 ```
 
 C Synthesis Result:
-> [!WARNING] II Violation & Not Perfect Loop & Timing Violation.
+> [!WARNING]
+> II Violation & Not Perfect Loop & Timing Violation.
 
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
@@ -229,9 +231,9 @@ L1: for (int i = 0; i < SIZE; i++) {
 ```
 
 C Synthesis Result:
-:::warning
-Massive Resources Require.
-:::
+> [!WARNING]
+> Massive Resources Require.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | LOW | LARGE | LARGE | LARGE | LARGE |
@@ -256,9 +258,9 @@ L1: for (i = 0; i < SIZE * SIZE; ++i) {
 ```
 
 * C Synthesis Result:
-:::info
-II = 7 is the limit, or II violation occurs.
-:::
+> [!NOTE]
+> II = 7 is the limit, or II violation occurs.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 7340049         | 4    | 8   | 1496 | 1604 |
@@ -293,9 +295,9 @@ L1: for (i = 0; i < SIZE * SIZE; ++i) {
 ```
 
 C Synthesis Result:
-:::success
-Although it requires more resource usage, the latency is five times lower than other methods.
-:::
+> [!NOTE]
+> Although it requires more resource usage, the latency is five times lower than other methods.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 1049666         | 228  | 45  | 6963 | 8874 |
@@ -352,9 +354,9 @@ WB: for (i = 0; i < SIZE; i++) {
 ```
 
 C Synthesis Result:
-:::success
-Here, we use Pipeline Rewind to keep latency 5x lower than other approaches while also reducing resource usage by about 2.5x.
-:::
+> [!NOTE]
+> Here, we use Pipeline Rewind to keep latency 5x lower than other approaches while also reducing resource usage by about 2.5x.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 1123352         | 36   | 21  | 2433 | 3515 |
@@ -460,9 +462,9 @@ WB: for (i = 0; i < SIZE; i++) {
 ```
 
 C Synthesis Result:
-:::success
-Use Unroll to cut latency in half.
-:::
+> [!NOTE]
+> Use Unroll to cut latency in half.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 599065          | 40   | 42  | 4522 | 6574 |
