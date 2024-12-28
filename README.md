@@ -13,7 +13,7 @@ This is my work in "Special Project on Application Acceleration with High-Level-
 ## Installization
 > [!CAUTION]
 > Note that this method will cause the GUI to display incorrectly, I'm still trying to figure out how to solve it.
-![image](https://hackmd.io/_uploads/SksKkUk6A.png)
+> ![image](https://hackmd.io/_uploads/SksKkUk6A.png)
 ### Xilinx Vitis
 There are many ways to install Xilinx tools, such as using a virtual machine (VM) or directly on Windows, but I'm going to introduce another method I use: Windows Subsystem for Linux (WSL), it **solves the problems of high hardware resource requirements and poor operating efficiency in other methods**.
 
@@ -152,9 +152,8 @@ INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 2
 ```
 
 * C Synthesis Result:
-:::warning
-II Violation & Not Perfect Loop.
-:::
+> [!WARNING]II Violation & Not Perfect Loop.
+
 | Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 | ------- | --------------- | ---- | --- | ---- | ---- |
 | 7.256ns | 5267457         | 4    | 5   | 1168 | 1233 |
