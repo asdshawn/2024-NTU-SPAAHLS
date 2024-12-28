@@ -11,7 +11,8 @@ This is my work in "Special Project on Application Acceleration with High-Level-
 6. [Softmax Function Implementation (Final Project)](#Softmax-Function-Implementation-Final-Project)
 
 ## Installization
-[!CAUTION]Note that this method will cause the GUI to display incorrectly, I'm still trying to figure out how to solve it.
+> [!CAUTION]
+> Note that this method will cause the GUI to display incorrectly, I'm still trying to figure out how to solve it.
 ![image](https://hackmd.io/_uploads/SksKkUk6A.png)
 ### Xilinx Vitis
 There are many ways to install Xilinx tools, such as using a virtual machine (VM) or directly on Windows, but I'm going to introduce another method I use: Windows Subsystem for Linux (WSL), it **solves the problems of high hardware resource requirements and poor operating efficiency in other methods**.
@@ -78,7 +79,8 @@ source ~/.bashrc
 
 ## Vivado Flow (Lab1 & Lab2)
 The first job is just to test the tool to make sure it works properly, Vitis HLS for IP design, Vivado for bitstream generation, and implement on OnlineFPGA through Jupyter Notebook, follow the workbook and you'll be done.
-[!CAUTION]When using the Vivado tool, when adding a component to the "Diagram" tab, there may be no response. Re-opening the tool should solve the problem.
+> [!CAUTION]
+> When using the Vivado tool, when adding a component to the "Diagram" tab, there may be no response. Re-opening the tool should solve the problem.
 
 ## Vitis Flow (Lab3)
 
