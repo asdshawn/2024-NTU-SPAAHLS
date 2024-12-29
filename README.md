@@ -4,7 +4,7 @@ This is my work in "Special Project on Application Acceleration with High-Level-
 ## Contents
 
 1. [Installization](#Installization)
-2. [Vivado Flow (Lab1&2)](#Vivado-Flow-Lab1-amp-Lab2)
+2. [Vivado Flow (Lab1&2)](#Vivado-Flow-Lab1--Lab2)
 3. [Vitis Flow (Lab3)](#Vitis-Flow-Lab3)
 4. [Host Code Optimization (LabA)](#Host-Code-Optimization-LabA)
 5. [Discrete Fourier Transform Implementation (LabB)](#Discrete-Fourier-Transform-Implementation-LabB)
