@@ -1,8 +1,7 @@
 # 2024-NTU-SPAAHLS
-This is my work in "Special Project on Application Acceleration with High-Level-Synthesis" course, and Study Journal is at: https://hackmd.io/@asdshawn/SPAAHLS
+This is my work in "Special Project on Application Acceleration with High-Level-Synthesis" course, and you can visit my study journal [here](https://hackmd.io/@asdshawn/SPAAHLS).
 
 ## Contents
-
 1. [Installization](#Installization)
 2. [Vivado Flow (Lab1&2)](#Vivado-Flow-Lab1--Lab2)
 3. [Vitis Flow (Lab3)](#Vitis-Flow-Lab3)
