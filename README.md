@@ -25,57 +25,58 @@ Step 1. Open your terminal and enter ```wsl -l -o``` to check the online version
 Step 2. Enter ```wsl --install -d <NAME>```to install the Ubuntu you want, we use ```Ubuntu-20.04``` in this course.
 
 Step 3. When the download finish, enter your username and password in Ubuntu and run:
-	```shell
-	sudo apt update
-	sudo apt upgrade
-	sudo apt install libtinfo5 libncurses5 -y
-	sudo apt install build-essential -y
-	sudo apt install libgtk-3-0 libcanberra-gtk-module
-	```
+```shell
+sudo apt update
+sudo apt upgrade
+sudo apt install libtinfo5 libncurses5 -y
+sudo apt install build-essential -y
+sudo apt install libgtk-3-0 libcanberra-gtk-module
+```
 
 Step 4. Go to [website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/archive-vitis.html) and download the version you need, here we use 2022.1 in course.
 (Vesion -> Vitis Archive -> 2022 -> 2022.1, roll down and find *Xilinx Unified Installer 2022.1: Linux Self Extracting Web Installer*.)
 
 Step 5. Put the installer into WSL and execute
-	```shell
-	chmod +x Xilinx_Unified_2022.1_0420_0327_Lin64.bin && sudo ./Xilinx_Unified_2022.1_0420_0327_Lin64.bin
-	```
+```shell
+chmod +x Xilinx_Unified_2022.1_0420_0327_Lin64.bin && sudo ./Xilinx_Unified_2022.1_0420_0327_Lin64.bin
+```
 
 Step 6. Follow the [guide](https://github.com/bol-edu/course-lab_1/blob/2022.1/HLS%20Tools%20Installation%20Guide%202022.1.pdf), you should finish installation of the tools.
 
 Setp 7. After finish the installation, enter:
-	```shell
-	cd /tools/Xilinx/Vitis/2022.1/scripts
-	sudo installLibs.sh
-	echo 'source /tools/Xilinx/Vitis/2022.1/settings64.sh' >> ~/.bashrc
-	source ~/.bashrc
-	```
+```shell
+cd /tools/Xilinx/Vitis/2022.1/scripts
+sudo installLibs.sh
+echo 'source /tools/Xilinx/Vitis/2022.1/settings64.sh' >> ~/.bashrc
+source ~/.bashrc
+```
+
 Step 8. Verify your installation.
 ![螢幕擷取畫面 2024-09-08 021916](https://hackmd.io/_uploads/S1FftpA3R.png)
 
 ### RISC-V GCC Toolchain (32-bit)
 Step 1. Install necessary package.
-	```shell
-	sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
-	```
+```shell
+sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
+```
 
 Step 2. Download the open source code of RISC-V toolchain.
-	```shell
-	git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
-	cd riscv-gnu-toolchain
-	```
+```shell
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+cd riscv-gnu-toolchain
+```
 
 Step 3. Set configuration and compile the toolchain, it will take some time. (Note that if errors like out of memory occur, modify to -j4 or less.)
-	```shell
-	./configure --prefix=/opt/riscv --with-arch=rv32i --with-abi=ilp32
-	sudo make -j8
-	```
+```shell
+./configure --prefix=/opt/riscv --with-arch=rv32i --with-abi=ilp32
+sudo make -j8
+```
 
 Step 4. Add the toolchain to system path.
-	```shell
-	echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.bashrc
-	source ~/.bashrc
-	```
+```shell
+echo 'export PATH=/opt/riscv/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
 
 ## Vivado Flow (Lab1 & Lab2)
 The first job is just to test the tool to make sure it works properly, Vitis HLS for IP design, Vivado for bitstream generation, and implement on OnlineFPGA through Jupyter Notebook, follow the workbook and you'll be done.
@@ -89,11 +90,11 @@ The first job is just to test the tool to make sure it works properly, Vitis HLS
 In this lab, you operate on a simple, single, generic C++ kernel implementation. This allows you to eliminate any aspects of the kernel code modifications, topological optimizations, and implementation choices from the analysis of host code implementations.
 
 ### Common Parameters:
-	* **numBuffers:** Not expected to be modified. This parameter is used to determine how many kernel invocations are performed.
-	* **oooQueue:** This boolean value is used to declare the kind of OpenCL event queue that is generated inside the ApiHandle.
-	* **processDelay:** This parameter can be used to artificially delay the computation time required by the kernel. This parameter is not used in this version of the tutorial.
-	* **bufferSize:** This parameter is used to declare the number of 512-bit values to be transferred per kernel invocation.
-	* **softwarePipelineInterval:** This parameter is used to determine how many operations can be pre-scheduled before synchronization occurs.
+* **numBuffers:** Not expected to be modified. This parameter is used to determine how many kernel invocations are performed.
+* **oooQueue:** This boolean value is used to declare the kind of OpenCL event queue that is generated inside the ApiHandle.
+* **processDelay:** This parameter can be used to artificially delay the computation time required by the kernel. This parameter is not used in this version of the tutorial.
+* **bufferSize:** This parameter is used to declare the number of 512-bit values to be transferred per kernel invocation.
+* **softwarePipelineInterval:** This parameter is used to determine how many operations can be pre-scheduled before synchronization occurs.
 
 ## Discrete Fourier Transform Implementation (LabB)
 The goal of this project is to design architectures that implement the Discrete Fourier Transform (DFT). DFT is a common operation in signal processing which generates a discrete frequency domain representation of the discrete input signal. The input signal is a vector of samples and the matrix is a set of basis functions corresponding to discrete cosine and sine waveforms of different frequencies. The multiplication of the input signal with these basis functions describes how well the input signal correlates with those waveforms, which is the value of the Fourier series at that frequency.
@@ -154,7 +155,6 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!WARNING]
 > II Violation & Not Perfect Loop.
-
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 5267457         | 4    | 5   | 1168 | 1233 |
@@ -206,12 +206,11 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!WARNING]
 > II Violation & Not Perfect Loop & Timing Violation.
+	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
+	| ------- | --------------- | ---- | --- | ---- | ---- |
+	| 8.844ns | 4217857         | 4    | 5   | 1168 | 1227 |
 
-| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
-| ------- | --------------- | ---- | --- | ---- | ---- |
-| 8.844ns | 4217857         | 4    | 5   | 1168 | 1227 |
 * Because we forced the loop to "pipeline", the latency was reduced a bit, but timing violations occurred, which was not what we wanted.
-
 * This time, let's add a "pipeline pragma" to the outer loop and see what happens:
 	```cpp
 	// Function Pipeline
@@ -233,10 +232,10 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!WARNING]
 > Massive Resources Require.
-
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | LOW | LARGE | LARGE | LARGE | LARGE |
+
 * There are no violations! But if you've tried it yourself, you know that Vitis HLS can crash or take you a long time.
 * This is because when there are two loops and you add a "pragma" in the outer loop, the inner loop will "unroll".
 * Obviously we don't have unlimited hardware resources to do this, so we "relax" our constraints by increasing the II (initiation interval):
@@ -260,10 +259,10 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!NOTE]
 > II = 7 is the limit, or II violation occurs.
-
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 7340049         | 4    | 8   | 1496 | 1604 |
+
 * Here it comes, a pipelined DFT! But as you can see, the price of II=7 is latency.
 * Since the "store" operation takes cycles to complete, we cannot "load" the previous data for accumulation immediately.
 * The trick we use here is to increase the "distance" of the calculation, try making II=1:
@@ -297,11 +296,11 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!NOTE]
 > Although it requires more resource usage, the latency is five times lower than other methods.
-
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 1049666         | 228  | 45  | 6963 | 8874 |
 
+* Use "rewind" pragma to further optimize pipeline:
 	```cpp
 	// Loop Pipeline with distance 8 & Rewind.
 	
@@ -356,7 +355,6 @@ Clock uncertainty: 2.7ns
 * C Synthesis Result:
 > [!NOTE]
 > Here, we use Pipeline Rewind to keep latency 5x lower than other approaches while also reducing resource usage by about 2.5x.
-
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 1123352         | 36   | 21  | 2433 | 3515 |
@@ -366,7 +364,7 @@ Clock uncertainty: 2.7ns
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 8.276ns | 1123352         | 36   | 21  | 1753 | 1596 |
 
-or
+	or
 	```cpp
 	DFT: for (i = 0; i < SIZE; i++) {
 	    CAL: for (j = 0; j < SIZE+DIST*DIST; j++) {
@@ -404,6 +402,7 @@ or
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 8.373ns | 1114173         | 8    | 25  | 2882 | 2293 |
 
+* Try to increase the instance and see the result:
 	```cpp
 	// Pipeline Rewind with Unroll factor 2.
 	
