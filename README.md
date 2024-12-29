@@ -81,14 +81,17 @@ source ~/.bashrc
 
 ## Vivado Flow (Lab1 & Lab2)
 The first job is just to test the tool to make sure it works properly, Vitis HLS for IP design, Vivado for bitstream generation, and implement on OnlineFPGA through Jupyter Notebook, follow the workbook and you'll be done.
+- [course-lab_1](https://github.com/bol-edu/course-lab_1)
+- [course-lab_2](https://github.com/bol-edu/course-lab_2)
 > [!CAUTION]
 > When using the Vivado tool, when adding a component to the "Diagram" tab, there may be no response. Re-opening the tool should solve the problem.
 
 ## Vitis Flow (Lab3)
-
+- [course-lab_3](https://github.com/bol-edu/course-lab_3)
 
 ## Host Code Optimization (LabA)
 In this lab, you operate on a simple, single, generic C++ kernel implementation. This allows you to eliminate any aspects of the kernel code modifications, topological optimizations, and implementation choices from the analysis of host code implementations.
+- [course-lab_A](https://github.com/Xilinx/Vitis-Tutorials/tree/2022.1/Hardware_Acceleration/Design_Tutorials/07-host-code-opt)
 
 ### Common Parameters:
 * **numBuffers:** Not expected to be modified. This parameter is used to determine how many kernel invocations are performed.
@@ -99,7 +102,7 @@ In this lab, you operate on a simple, single, generic C++ kernel implementation.
 
 ## Discrete Fourier Transform Implementation (LabB)
 The goal of this project is to design architectures that implement the Discrete Fourier Transform (DFT). DFT is a common operation in signal processing which generates a discrete frequency domain representation of the discrete input signal. The input signal is a vector of samples and the matrix is a set of basis functions corresponding to discrete cosine and sine waveforms of different frequencies. The multiplication of the input signal with these basis functions describes how well the input signal correlates with those waveforms, which is the value of the Fourier series at that frequency.
-
+- [course-lab_B](https://pp4fpgas.readthedocs.io/en/latest/project3.html)
 
 ### Definition
 
