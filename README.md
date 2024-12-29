@@ -470,3 +470,22 @@ C Synthesis Result:
 | 7.256ns | 599065          | 40   | 42  | 4522 | 6574 |
 
 ## Softmax Function Implementation (Final Project)
+I focus on optimizing the **softmax function**. Since the softmax function requires an exponential function, either use an approximation or use the built-in function `hls::exp()`.
+> [!NOTE]
+> While using `hls::exp()`, you'll need to `#include <hls_math.h>`.
+> [!WARNING]
+> For using `hls::exp()`, the **INTERNAL-INFO: never saw llvm instructions 'fexp'(507)** message will be displayed in the c synthesis step but will not affect the results.
+  
+The first step of the softmax function is to calculate the exponents of the input elements and accumulate them together, but during the accumulation operation, an II violation occurs between "load" and "store", so I increase the distance to make II=1.
+  ```cpp
+  for (int j = 0; j < REAL_K_COL; j++) {
+      sum[j % 8] += exp_approx(scores[i][j]);
+  }
+  for (int j = 1; j < 8; j++) {
+      sum[0] += sum[j];
+  }
+  ```
+
+Although implementing the softmax function is not very difficult, optimizing it requires many factors to be considered.
+- **Resource Usage:** Since both inputs and outputs are huge matrices, using just one instance will take many times to complete, so there is a trade-off between latency and area.
+- **Pipeline strategy:** In order to improve hardware utilization and do not want to leave the hardware idle, the pipeline design must be optimized. Since there are many sub-loops inside the function, it is impossible to directly use the "pipeline rewind" pragma, so you need to try to use different algorithms to achieve it.
