@@ -14,6 +14,7 @@ This is my work in "Special Project on Application Acceleration with High-Level-
 > [!CAUTION]
 > Note that this method will cause the GUI to display incorrectly, I'm still trying to figure out how to solve it.
 > ![image](https://hackmd.io/_uploads/SksKkUk6A.png)
+
 ### Xilinx Vitis
 There are many ways to install Xilinx tools, such as using a virtual machine (VM) or directly on Windows, but I'm going to introduce another method I use: Windows Subsystem for Linux (WSL), it **solves the problems of high hardware resource requirements and poor operating efficiency in other methods**.
 
@@ -153,11 +154,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!WARNING]
-> II Violation & Not Perfect Loop.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 5267457         | 4    | 5   | 1168 | 1233 |
+> [!WARNING]
+> II Violation & Not Perfect Loop.
 
 * This results in a lot of violations, which is completely normal, let's try to improve it step by step.
 
@@ -204,11 +205,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!WARNING]
-> II Violation & Not Perfect Loop & Timing Violation.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 8.844ns | 4217857         | 4    | 5   | 1168 | 1227 |
+> [!WARNING]
+> II Violation & Not Perfect Loop & Timing Violation.
 
 * Because we forced the loop to "pipeline", the latency was reduced a bit, but timing violations occurred, which was not what we wanted.
 * This time, let's add a "pipeline pragma" to the outer loop and see what happens:
@@ -230,11 +231,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!WARNING]
-> Massive Resources Require.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | LOW | LARGE | LARGE | LARGE | LARGE |
+> [!WARNING]
+> Massive Resources Require.
 
 * There are no violations! But if you've tried it yourself, you know that Vitis HLS can crash or take you a long time.
 * This is because when there are two loops and you add a "pragma" in the outer loop, the inner loop will "unroll".
@@ -257,11 +258,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!NOTE]
-> II = 7 is the limit, or II violation occurs.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 7340049         | 4    | 8   | 1496 | 1604 |
+> [!CAUTION]
+> II = 7 is the limit, or II violation occurs.
 
 * Here it comes, a pipelined DFT! But as you can see, the price of II=7 is latency.
 * Since the "store" operation takes cycles to complete, we cannot "load" the previous data for accumulation immediately.
@@ -294,11 +295,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!NOTE]
-> Although it requires more resource usage, the latency is five times lower than other methods.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 1049666         | 228  | 45  | 6963 | 8874 |
+> [!CAUTION]
+> Although it requires more resource usage, the latency is five times lower than other methods.
 
 * Use "rewind" pragma to further optimize pipeline:
 	```cpp
@@ -353,11 +354,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!NOTE]
-> Here, we use Pipeline Rewind to keep latency 5x lower than other approaches while also reducing resource usage by about 2.5x.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 1123352         | 36   | 21  | 2433 | 3515 |
+> [!NOTE]
+> Here, we use Pipeline Rewind to keep latency 5x lower than other approaches while also reducing resource usage by about 2.5x.
 
 * Cosimulation Result:
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
@@ -461,11 +462,11 @@ Clock uncertainty: 2.7ns
 	```
 
 * C Synthesis Result:
-> [!NOTE]
-> Use Unroll to cut latency in half.
 	| Timing  | Latency(cycles) | BRAM | DSP | FF   | LUT  |
 	| ------- | --------------- | ---- | --- | ---- | ---- |
 	| 7.256ns | 599065          | 40   | 42  | 4522 | 6574 |
+> [!NOTE]
+> Use Unroll to cut latency in half.
 
 ## Softmax Function Implementation (Final Project)
 I focus on optimizing the **softmax function**. Since the softmax function requires an exponential function, either use an approximation or use the built-in function `hls::exp()`.
